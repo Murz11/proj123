@@ -1,0 +1,19 @@
+<root>
+    <app>
+        <mongodb.connectionString>mongodb://localhost:27017</mongodb.connectionString>
+        <mongodb.databaseName>trips_helper</mongodb.databaseName>
+        <mongodb.collectionName>history_content</mongodb.collectionName>
+    </app>
+    <planets>
+        <planet>Земля</planet>
+        <planet>Марс</planet>
+        <planet>Венера</planet>
+        <planet>Юпитер</planet>
+    </planets>
+    <months>
+        <month key="1">Январь</month>
+        <month key="2">Февраль</month>
+        <month key="3">Март</month>
+        <month key="4">Апрель</month>
+    </months>
+</root>

@@ -1,0 +1,16 @@
+app:
+  mongodb.connectionString: mongodb://localhost:27017
+  mongodb.databaseName: trips_helper
+  mongodb.collectionName: history_content
+
+planets:
+  - Земля
+  - Марс
+  - Венера
+  - Юпитер
+
+months:
+  1: Январь
+  2: Февраль
+  3: Март
+  4: Апрель

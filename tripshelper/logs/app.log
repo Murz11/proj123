@@ -1,0 +1,591 @@
+2024-12-15 22:22:14 DEBUG cluster:56 - Updating cluster description to  {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING}]
+2024-12-15 22:22:14 INFO  client:71 - MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync", "version": "4.10.2"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/21.0.2+13-LTS-58"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@5f2f577, com.mongodb.Jep395RecordCodecProvider@6273c5a4, com.mongodb.KotlinCodecProvider@5d465e4b]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=UNSPECIFIED, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null}
+2024-12-15 22:22:14 INFO  cluster:71 - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=18086800}
+2024-12-15 22:22:14 DEBUG connection:56 - Connection pool ready for localhost:27017
+2024-12-15 22:22:14 DEBUG cluster:56 - Updating cluster description to  {type=STANDALONE, servers=[{address=localhost:27017, type=STANDALONE, roundTripTime=18.1 ms, state=CONNECTED}]
+2024-12-15 22:22:14 DEBUG cluster:56 - Checking status of localhost:27017
+2024-12-15 22:22:15 DEBUG connection:56 - Checkout started for connection to localhost:27017
+2024-12-15 22:22:15 DEBUG connection:56 - Connection created: address=localhost:27017, driver-generated ID=3
+2024-12-15 22:22:15 DEBUG connection:56 - Connection ready: address=localhost:27017, driver-generated ID=3
+2024-12-15 22:22:15 DEBUG connection:56 - Connection checked out: address=localhost:27017, driver-generated ID=3
+2024-12-15 22:22:15 DEBUG operation:56 - retryWrites set to true but the server is a standalone server.
+2024-12-15 22:22:15 DEBUG operation:56 - retryWrites set to true but the server is a standalone server.
+2024-12-15 22:22:15 DEBUG command:56 - Command "insert" started on database trips_helper using a connection with driver-generated ID 3 and server-generated ID 150 to localhost:27017. The request ID is 5 and the operation ID is 3. Command: {"insert": "history_content", "ordered": true, "$db": "trips_helper", "lsid": {"id": {"$binary": {"base64": "8y0fXRFcSMuoolmzqoPycQ==", "subType": "04"}}}, "documents": [{"_id": {"$oid": "675f2c6645cd6f2711333e09"}, "className": "TestClass", "createdDate": {"$date": "2024-12-15T19:22:14.267Z"}, "actor": "TestUser", "methodName": "testCreateMethod", "params": "param1=value1", "result": "SUCCESS"}]}
+2024-12-15 22:22:15 DEBUG command:56 - Command "insert" succeeded in 8.9918 ms using a connection with driver-generated ID 3 and server-generated ID 150 to localhost:27017. The request ID is 5 and the operation ID is 3. Command reply: {"n": 1, "ok": 1.0}
+2024-12-15 22:22:15 DEBUG connection:56 - Connection checked in: address=localhost:27017, driver-generated ID=3
+2024-12-15 22:22:15 DEBUG connection:56 - Checkout started for connection to localhost:27017
+2024-12-15 22:22:15 DEBUG connection:56 - Connection checked out: address=localhost:27017, driver-generated ID=3
+2024-12-15 22:22:15 DEBUG command:56 - Command "find" started on database trips_helper using a connection with driver-generated ID 3 and server-generated ID 150 to localhost:27017. The request ID is 6 and the operation ID is 5. Command: {"find": "history_content", "filter": {}, "$db": "trips_helper", "lsid": {"id": {"$binary": {"base64": "8y0fXRFcSMuoolmzqoPycQ==", "subType": "04"}}}}
+2024-12-15 22:22:15 DEBUG command:56 - Command "find" succeeded in 2.0117 ms using a connection with driver-generated ID 3 and server-generated ID 150 to localhost:27017. The request ID is 6 and the operation ID is 5. Command reply: {"cursor": {"firstBatch": [{"_id": {"$oid": "675f2ab15df9c17a07e04a0b"}, "className": "TestClass", "createdDate": {"$date": "2024-12-15T19:14:56.783Z"}, "actor": "TestUser", "methodName": "testCreateMethod", "params": "param1=value1", "result": "SUCCESS"}, {"_id": {"$oid": "675f2ab15df9c17a07e04a0c"}, "className": "TestClass", "createdDate": {"$date": "2024-12-15T19:14:57.588Z"}, "actor": "TestUser", "methodName": "testCreateMethod", "params": "param1=value1", "result": "SUCCESS"}, {"_id": {"$oid": "675f2ab15df9c17a07e04a0d"}, "className": "TestClass", "createdDate": {"$date": "2024-12-15T19:14:57.6Z"}, "actor": "TestUser", "methodName": "testCreateMethod", "params": "param1=value1", "result": "SUCCESS"}, {"_id": {"$oid": "675f2ab15df9c17a07e04a0f"}, "className": "TestClass", "createdDate": {"$date": "2024-12-15T19:14:57.629Z"}, "actor": "TestUser", "methodName": "testUpdateMethod", "params": "param1=value1", "result": "FAULT"}, {"_id": {"$oid": "675f2c6645cd6f2711333e09"}, "className" ...
+2024-12-15 22:22:15 DEBUG operation:56 - Received batch of 5 documents with cursorId 0 from server localhost:27017
+2024-12-15 22:22:15 DEBUG connection:56 - Connection checked in: address=localhost:27017, driver-generated ID=3
+2024-12-15 22:22:15 DEBUG connection:56 - Checkout started for connection to localhost:27017
+2024-12-15 22:22:15 DEBUG connection:56 - Connection checked out: address=localhost:27017, driver-generated ID=3
+2024-12-15 22:22:15 DEBUG command:56 - Command "find" started on database trips_helper using a connection with driver-generated ID 3 and server-generated ID 150 to localhost:27017. The request ID is 7 and the operation ID is 6. Command: {"find": "history_content", "filter": {}, "$db": "trips_helper", "lsid": {"id": {"$binary": {"base64": "8y0fXRFcSMuoolmzqoPycQ==", "subType": "04"}}}}
+2024-12-15 22:22:15 DEBUG command:56 - Command "find" succeeded in 1.392 ms using a connection with driver-generated ID 3 and server-generated ID 150 to localhost:27017. The request ID is 7 and the operation ID is 6. Command reply: {"cursor": {"firstBatch": [{"_id": {"$oid": "675f2ab15df9c17a07e04a0b"}, "className": "TestClass", "createdDate": {"$date": "2024-12-15T19:14:56.783Z"}, "actor": "TestUser", "methodName": "testCreateMethod", "params": "param1=value1", "result": "SUCCESS"}, {"_id": {"$oid": "675f2ab15df9c17a07e04a0c"}, "className": "TestClass", "createdDate": {"$date": "2024-12-15T19:14:57.588Z"}, "actor": "TestUser", "methodName": "testCreateMethod", "params": "param1=value1", "result": "SUCCESS"}, {"_id": {"$oid": "675f2ab15df9c17a07e04a0d"}, "className": "TestClass", "createdDate": {"$date": "2024-12-15T19:14:57.6Z"}, "actor": "TestUser", "methodName": "testCreateMethod", "params": "param1=value1", "result": "SUCCESS"}, {"_id": {"$oid": "675f2ab15df9c17a07e04a0f"}, "className": "TestClass", "createdDate": {"$date": "2024-12-15T19:14:57.629Z"}, "actor": "TestUser", "methodName": "testUpdateMethod", "params": "param1=value1", "result": "FAULT"}, {"_id": {"$oid": "675f2c6645cd6f2711333e09"}, "className" ...
+2024-12-15 22:22:15 DEBUG operation:56 - Received batch of 5 documents with cursorId 0 from server localhost:27017
+2024-12-15 22:22:15 DEBUG connection:56 - Connection checked in: address=localhost:27017, driver-generated ID=3
+2024-12-15 22:22:32 DEBUG connection:56 - Connection pool created for localhost:27017 using options maxIdleTimeMS=0, minPoolSize=0, maxPoolSize=100, maxConnecting=2, waitQueueTimeoutMS=120000
+2024-12-15 22:22:32 DEBUG cluster:56 - Updating cluster description to  {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING}]
+2024-12-15 22:22:32 INFO  client:71 - MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync", "version": "4.10.2"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/21.0.2+13-LTS-58"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@7e809b79, com.mongodb.Jep395RecordCodecProvider@5cc126dc, com.mongodb.KotlinCodecProvider@625e134e]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=UNSPECIFIED, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null}
+2024-12-15 22:22:32 INFO  cluster:71 - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=18997700}
+2024-12-15 22:22:32 DEBUG connection:56 - Connection pool ready for localhost:27017
+2024-12-15 22:22:32 DEBUG cluster:56 - Updating cluster description to  {type=STANDALONE, servers=[{address=localhost:27017, type=STANDALONE, roundTripTime=19.0 ms, state=CONNECTED}]
+2024-12-15 22:22:32 DEBUG cluster:56 - Checking status of localhost:27017
+2024-12-15 22:22:32 DEBUG connection:56 - Checkout started for connection to localhost:27017
+2024-12-15 22:22:32 DEBUG connection:56 - Connection created: address=localhost:27017, driver-generated ID=3
+2024-12-15 22:22:32 DEBUG connection:56 - Connection ready: address=localhost:27017, driver-generated ID=3
+2024-12-15 22:22:32 DEBUG connection:56 - Connection checked out: address=localhost:27017, driver-generated ID=3
+2024-12-15 22:22:32 DEBUG operation:56 - retryWrites set to true but the server is a standalone server.
+2024-12-15 22:22:32 DEBUG operation:56 - retryWrites set to true but the server is a standalone server.
+2024-12-15 22:22:32 DEBUG command:56 - Command "insert" started on database trips_helper using a connection with driver-generated ID 3 and server-generated ID 153 to localhost:27017. The request ID is 5 and the operation ID is 3. Command: {"insert": "history_content", "ordered": true, "$db": "trips_helper", "lsid": {"id": {"$binary": {"base64": "NFSElzU1TlW6nGuDHCokuA==", "subType": "04"}}}, "documents": [{"_id": {"$oid": "675f2c78ef58fc2319d5162d"}, "className": "TestClass", "createdDate": {"$date": "2024-12-15T19:22:31.732Z"}, "actor": "TestUser", "methodName": "testCreateMethod", "params": "param1=value1", "result": "SUCCESS"}]}
+2024-12-15 22:22:32 DEBUG command:56 - Command "insert" succeeded in 9.9742 ms using a connection with driver-generated ID 3 and server-generated ID 153 to localhost:27017. The request ID is 5 and the operation ID is 3. Command reply: {"n": 1, "ok": 1.0}
+2024-12-15 22:22:32 DEBUG connection:56 - Connection checked in: address=localhost:27017, driver-generated ID=3
+2024-12-15 22:22:32 DEBUG connection:56 - Checkout started for connection to localhost:27017
+2024-12-15 22:22:32 DEBUG connection:56 - Connection checked out: address=localhost:27017, driver-generated ID=3
+2024-12-15 22:22:32 DEBUG command:56 - Command "find" started on database trips_helper using a connection with driver-generated ID 3 and server-generated ID 153 to localhost:27017. The request ID is 6 and the operation ID is 5. Command: {"find": "history_content", "filter": {}, "$db": "trips_helper", "lsid": {"id": {"$binary": {"base64": "NFSElzU1TlW6nGuDHCokuA==", "subType": "04"}}}}
+2024-12-15 22:22:32 DEBUG command:56 - Command "find" succeeded in 2.1021 ms using a connection with driver-generated ID 3 and server-generated ID 153 to localhost:27017. The request ID is 6 and the operation ID is 5. Command reply: {"cursor": {"firstBatch": [{"_id": {"$oid": "675f2c78ef58fc2319d5162d"}, "className": "TestClass", "createdDate": {"$date": "2024-12-15T19:22:31.732Z"}, "actor": "TestUser", "methodName": "testCreateMethod", "params": "param1=value1", "result": "SUCCESS"}], "id": 0, "ns": "trips_helper.history_content"}, "ok": 1.0}
+2024-12-15 22:22:32 DEBUG operation:56 - Received batch of 1 documents with cursorId 0 from server localhost:27017
+2024-12-15 22:22:32 DEBUG connection:56 - Connection checked in: address=localhost:27017, driver-generated ID=3
+2024-12-15 22:22:32 DEBUG connection:56 - Checkout started for connection to localhost:27017
+2024-12-15 22:22:32 DEBUG connection:56 - Connection checked out: address=localhost:27017, driver-generated ID=3
+2024-12-15 22:22:32 DEBUG command:56 - Command "find" started on database trips_helper using a connection with driver-generated ID 3 and server-generated ID 153 to localhost:27017. The request ID is 7 and the operation ID is 6. Command: {"find": "history_content", "filter": {}, "$db": "trips_helper", "lsid": {"id": {"$binary": {"base64": "NFSElzU1TlW6nGuDHCokuA==", "subType": "04"}}}}
+2024-12-15 22:22:32 DEBUG command:56 - Command "find" succeeded in 1.2838 ms using a connection with driver-generated ID 3 and server-generated ID 153 to localhost:27017. The request ID is 7 and the operation ID is 6. Command reply: {"cursor": {"firstBatch": [{"_id": {"$oid": "675f2c78ef58fc2319d5162d"}, "className": "TestClass", "createdDate": {"$date": "2024-12-15T19:22:31.732Z"}, "actor": "TestUser", "methodName": "testCreateMethod", "params": "param1=value1", "result": "SUCCESS"}], "id": 0, "ns": "trips_helper.history_content"}, "ok": 1.0}
+2024-12-15 22:22:32 DEBUG operation:56 - Received batch of 1 documents with cursorId 0 from server localhost:27017
+2024-12-15 22:22:32 DEBUG connection:56 - Connection checked in: address=localhost:27017, driver-generated ID=3
+2024-12-15 22:33:45 DEBUG connection:56 - Connection pool created for localhost:27017 using options maxIdleTimeMS=0, minPoolSize=0, maxPoolSize=100, maxConnecting=2, waitQueueTimeoutMS=120000
+2024-12-15 22:33:45 DEBUG cluster:56 - Updating cluster description to  {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING}]
+2024-12-15 22:33:45 INFO  client:71 - MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync", "version": "4.10.2"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/21.0.2+13-LTS-58"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@89c10b7, com.mongodb.Jep395RecordCodecProvider@5dbe30be, com.mongodb.KotlinCodecProvider@4fe89c24]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=UNSPECIFIED, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null}
+2024-12-15 22:33:45 INFO  cluster:71 - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=40794600}
+2024-12-15 22:33:45 DEBUG connection:56 - Connection pool ready for localhost:27017
+2024-12-15 22:33:45 DEBUG cluster:56 - Updating cluster description to  {type=STANDALONE, servers=[{address=localhost:27017, type=STANDALONE, roundTripTime=40.8 ms, state=CONNECTED}]
+2024-12-15 22:33:45 DEBUG cluster:56 - Checking status of localhost:27017
+2024-12-15 22:33:45 DEBUG connection:56 - Checkout started for connection to localhost:27017
+2024-12-15 22:33:45 DEBUG connection:56 - Connection created: address=localhost:27017, driver-generated ID=3
+2024-12-15 22:33:45 DEBUG connection:56 - Connection ready: address=localhost:27017, driver-generated ID=3
+2024-12-15 22:33:45 DEBUG connection:56 - Connection checked out: address=localhost:27017, driver-generated ID=3
+2024-12-15 22:33:45 DEBUG operation:56 - retryWrites set to true but the server is a standalone server.
+2024-12-15 22:33:45 DEBUG operation:56 - retryWrites set to true but the server is a standalone server.
+2024-12-15 22:33:45 DEBUG command:56 - Command "insert" started on database trips_helper using a connection with driver-generated ID 3 and server-generated ID 156 to localhost:27017. The request ID is 5 and the operation ID is 3. Command: {"insert": "history_content", "ordered": true, "$db": "trips_helper", "lsid": {"id": {"$binary": {"base64": "PJBPXteoQWKmiXHjl4K/bA==", "subType": "04"}}}, "documents": [{"_id": {"$oid": "675f2f19d8edd05f853ec118"}, "id": null, "className": "TestClass", "createdDate": 1734291224454, "actor": "TestUser", "methodName": "testCreateMethod", "params": "param1=value1", "result": "SUCCESS"}]}
+2024-12-15 22:33:45 DEBUG command:56 - Command "insert" succeeded in 8.8893 ms using a connection with driver-generated ID 3 and server-generated ID 156 to localhost:27017. The request ID is 5 and the operation ID is 3. Command reply: {"n": 1, "ok": 1.0}
+2024-12-15 22:33:45 DEBUG connection:56 - Connection checked in: address=localhost:27017, driver-generated ID=3
+2024-12-15 22:33:45 DEBUG connection:56 - Checkout started for connection to localhost:27017
+2024-12-15 22:33:45 DEBUG connection:56 - Connection checked out: address=localhost:27017, driver-generated ID=3
+2024-12-15 22:33:45 DEBUG command:56 - Command "find" started on database trips_helper using a connection with driver-generated ID 3 and server-generated ID 156 to localhost:27017. The request ID is 6 and the operation ID is 5. Command: {"find": "history_content", "filter": {}, "$db": "trips_helper", "lsid": {"id": {"$binary": {"base64": "PJBPXteoQWKmiXHjl4K/bA==", "subType": "04"}}}}
+2024-12-15 22:33:45 DEBUG command:56 - Command "find" succeeded in 1.9561 ms using a connection with driver-generated ID 3 and server-generated ID 156 to localhost:27017. The request ID is 6 and the operation ID is 5. Command reply: {"cursor": {"firstBatch": [{"_id": {"$oid": "675f2f19d8edd05f853ec118"}, "id": null, "className": "TestClass", "createdDate": 1734291224454, "actor": "TestUser", "methodName": "testCreateMethod", "params": "param1=value1", "result": "SUCCESS"}], "id": 0, "ns": "trips_helper.history_content"}, "ok": 1.0}
+2024-12-15 22:33:45 DEBUG operation:56 - Received batch of 1 documents with cursorId 0 from server localhost:27017
+2024-12-15 22:33:45 DEBUG connection:56 - Connection checked in: address=localhost:27017, driver-generated ID=3
+2024-12-16 19:20:22 DEBUG connection:56 - Connection pool created for localhost:27017 using options maxIdleTimeMS=0, minPoolSize=0, maxPoolSize=100, maxConnecting=2, waitQueueTimeoutMS=120000
+2024-12-16 19:20:22 DEBUG cluster:56 - Updating cluster description to  {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING}]
+2024-12-16 19:20:22 INFO  client:71 - MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync", "version": "4.10.2"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/21.0.2+13-LTS-58"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@4fe89c24, com.mongodb.Jep395RecordCodecProvider@55795845, com.mongodb.KotlinCodecProvider@3d08f3f5]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=UNSPECIFIED, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null}
+2024-12-16 19:20:22 INFO  cluster:71 - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=27203200}
+2024-12-16 19:20:22 DEBUG connection:56 - Connection pool ready for localhost:27017
+2024-12-16 19:20:22 DEBUG cluster:56 - Updating cluster description to  {type=STANDALONE, servers=[{address=localhost:27017, type=STANDALONE, roundTripTime=27.2 ms, state=CONNECTED}]
+2024-12-16 19:20:22 DEBUG cluster:56 - Checking status of localhost:27017
+2024-12-16 19:20:22 DEBUG connection:56 - Checkout started for connection to localhost:27017
+2024-12-16 19:20:22 DEBUG connection:56 - Connection created: address=localhost:27017, driver-generated ID=3
+2024-12-16 19:20:22 DEBUG connection:56 - Connection ready: address=localhost:27017, driver-generated ID=3
+2024-12-16 19:20:22 DEBUG connection:56 - Connection checked out: address=localhost:27017, driver-generated ID=3
+2024-12-16 19:20:22 DEBUG operation:56 - retryWrites set to true but the server is a standalone server.
+2024-12-16 19:20:22 DEBUG operation:56 - retryWrites set to true but the server is a standalone server.
+2024-12-16 19:20:22 DEBUG command:56 - Command "insert" started on database trips_helper using a connection with driver-generated ID 3 and server-generated ID 168 to localhost:27017. The request ID is 5 and the operation ID is 3. Command: {"insert": "history_content", "ordered": true, "$db": "trips_helper", "lsid": {"id": {"$binary": {"base64": "AI2VJjpJQiW5PA7XeHilhQ==", "subType": "04"}}}, "documents": [{"_id": {"$oid": "67605346b7a4872fa1b6dd2d"}, "className": "TestClass", "createdDate": {"$date": "2024-12-16T16:20:21.742Z"}, "actor": "TestUser", "methodName": "testCreateMethod", "params": "param1=value1", "result": "SUCCESS"}]}
+2024-12-16 19:20:22 DEBUG command:56 - Command "insert" succeeded in 11.2621 ms using a connection with driver-generated ID 3 and server-generated ID 168 to localhost:27017. The request ID is 5 and the operation ID is 3. Command reply: {"n": 1, "ok": 1.0}
+2024-12-16 19:20:22 DEBUG connection:56 - Connection checked in: address=localhost:27017, driver-generated ID=3
+2024-12-16 19:20:22 DEBUG connection:56 - Checkout started for connection to localhost:27017
+2024-12-16 19:20:22 DEBUG connection:56 - Connection checked out: address=localhost:27017, driver-generated ID=3
+2024-12-16 19:20:22 DEBUG command:56 - Command "find" started on database trips_helper using a connection with driver-generated ID 3 and server-generated ID 168 to localhost:27017. The request ID is 6 and the operation ID is 5. Command: {"find": "history_content", "filter": {}, "$db": "trips_helper", "lsid": {"id": {"$binary": {"base64": "AI2VJjpJQiW5PA7XeHilhQ==", "subType": "04"}}}}
+2024-12-16 19:20:22 DEBUG command:56 - Command "find" succeeded in 2.6716 ms using a connection with driver-generated ID 3 and server-generated ID 168 to localhost:27017. The request ID is 6 and the operation ID is 5. Command reply: {"cursor": {"firstBatch": [{"_id": {"$oid": "67605346b7a4872fa1b6dd2d"}, "className": "TestClass", "createdDate": {"$date": "2024-12-16T16:20:21.742Z"}, "actor": "TestUser", "methodName": "testCreateMethod", "params": "param1=value1", "result": "SUCCESS"}], "id": 0, "ns": "trips_helper.history_content"}, "ok": 1.0}
+2024-12-16 19:20:22 DEBUG operation:56 - Received batch of 1 documents with cursorId 0 from server localhost:27017
+2024-12-16 19:20:22 DEBUG connection:56 - Connection checked in: address=localhost:27017, driver-generated ID=3
+2024-12-16 19:20:22 DEBUG connection:56 - Checkout started for connection to localhost:27017
+2024-12-16 19:20:22 DEBUG connection:56 - Connection checked out: address=localhost:27017, driver-generated ID=3
+2024-12-16 19:20:22 DEBUG command:56 - Command "find" started on database trips_helper using a connection with driver-generated ID 3 and server-generated ID 168 to localhost:27017. The request ID is 7 and the operation ID is 6. Command: {"find": "history_content", "filter": {"_id": {"$oid": "67605346b7a4872fa1b6dd2d"}}, "limit": 1, "singleBatch": true, "$db": "trips_helper", "lsid": {"id": {"$binary": {"base64": "AI2VJjpJQiW5PA7XeHilhQ==", "subType": "04"}}}}
+2024-12-16 19:20:22 DEBUG command:56 - Command "find" succeeded in 7.1982 ms using a connection with driver-generated ID 3 and server-generated ID 168 to localhost:27017. The request ID is 7 and the operation ID is 6. Command reply: {"cursor": {"firstBatch": [{"_id": {"$oid": "67605346b7a4872fa1b6dd2d"}, "className": "TestClass", "createdDate": {"$date": "2024-12-16T16:20:21.742Z"}, "actor": "TestUser", "methodName": "testCreateMethod", "params": "param1=value1", "result": "SUCCESS"}], "id": 0, "ns": "trips_helper.history_content"}, "ok": 1.0}
+2024-12-16 19:20:22 DEBUG operation:56 - Received batch of 1 documents with cursorId 0 from server localhost:27017
+2024-12-16 19:20:22 DEBUG connection:56 - Connection checked in: address=localhost:27017, driver-generated ID=3
+2024-12-16 19:20:22 DEBUG connection:56 - Checkout started for connection to localhost:27017
+2024-12-16 19:20:22 DEBUG connection:56 - Connection checked out: address=localhost:27017, driver-generated ID=3
+2024-12-16 19:20:22 DEBUG operation:56 - retryWrites set to true but the server is a standalone server.
+2024-12-16 19:20:22 DEBUG operation:56 - retryWrites set to true but the server is a standalone server.
+2024-12-16 19:20:22 DEBUG command:56 - Command "insert" started on database trips_helper using a connection with driver-generated ID 3 and server-generated ID 168 to localhost:27017. The request ID is 8 and the operation ID is 7. Command: {"insert": "history_content", "ordered": true, "$db": "trips_helper", "lsid": {"id": {"$binary": {"base64": "AI2VJjpJQiW5PA7XeHilhQ==", "subType": "04"}}}, "documents": [{"_id": {"$oid": "67605346b7a4872fa1b6dd2e"}, "className": "TestClass", "createdDate": {"$date": "2024-12-16T16:20:22.645Z"}, "actor": "TestUser", "methodName": "testCreateMethod", "params": "param1=value1", "result": "SUCCESS"}]}
+2024-12-16 19:20:22 DEBUG command:56 - Command "insert" succeeded in 1.9654 ms using a connection with driver-generated ID 3 and server-generated ID 168 to localhost:27017. The request ID is 8 and the operation ID is 7. Command reply: {"n": 1, "ok": 1.0}
+2024-12-16 19:20:22 DEBUG connection:56 - Connection checked in: address=localhost:27017, driver-generated ID=3
+2024-12-16 19:20:22 DEBUG connection:56 - Checkout started for connection to localhost:27017
+2024-12-16 19:20:22 DEBUG connection:56 - Connection checked out: address=localhost:27017, driver-generated ID=3
+2024-12-16 19:20:22 DEBUG command:56 - Command "find" started on database trips_helper using a connection with driver-generated ID 3 and server-generated ID 168 to localhost:27017. The request ID is 9 and the operation ID is 8. Command: {"find": "history_content", "filter": {}, "$db": "trips_helper", "lsid": {"id": {"$binary": {"base64": "AI2VJjpJQiW5PA7XeHilhQ==", "subType": "04"}}}}
+2024-12-16 19:20:22 DEBUG command:56 - Command "find" succeeded in 13.347 ms using a connection with driver-generated ID 3 and server-generated ID 168 to localhost:27017. The request ID is 9 and the operation ID is 8. Command reply: {"cursor": {"firstBatch": [{"_id": {"$oid": "67605346b7a4872fa1b6dd2d"}, "className": "TestClass", "createdDate": {"$date": "2024-12-16T16:20:21.742Z"}, "actor": "TestUser", "methodName": "testCreateMethod", "params": "param1=value1", "result": "SUCCESS"}, {"_id": {"$oid": "67605346b7a4872fa1b6dd2e"}, "className": "TestClass", "createdDate": {"$date": "2024-12-16T16:20:22.645Z"}, "actor": "TestUser", "methodName": "testCreateMethod", "params": "param1=value1", "result": "SUCCESS"}], "id": 0, "ns": "trips_helper.history_content"}, "ok": 1.0}
+2024-12-16 19:20:22 DEBUG operation:56 - Received batch of 2 documents with cursorId 0 from server localhost:27017
+2024-12-16 19:20:22 DEBUG connection:56 - Connection checked in: address=localhost:27017, driver-generated ID=3
+2024-12-16 19:20:22 DEBUG connection:56 - Checkout started for connection to localhost:27017
+2024-12-16 19:20:22 DEBUG connection:56 - Connection checked out: address=localhost:27017, driver-generated ID=3
+2024-12-16 19:20:22 DEBUG command:56 - Command "find" started on database trips_helper using a connection with driver-generated ID 3 and server-generated ID 168 to localhost:27017. The request ID is 10 and the operation ID is 9. Command: {"find": "history_content", "filter": {}, "$db": "trips_helper", "lsid": {"id": {"$binary": {"base64": "AI2VJjpJQiW5PA7XeHilhQ==", "subType": "04"}}}}
+2024-12-16 19:20:22 DEBUG command:56 - Command "find" succeeded in 1.3776 ms using a connection with driver-generated ID 3 and server-generated ID 168 to localhost:27017. The request ID is 10 and the operation ID is 9. Command reply: {"cursor": {"firstBatch": [{"_id": {"$oid": "67605346b7a4872fa1b6dd2d"}, "className": "TestClass", "createdDate": {"$date": "2024-12-16T16:20:21.742Z"}, "actor": "TestUser", "methodName": "testCreateMethod", "params": "param1=value1", "result": "SUCCESS"}, {"_id": {"$oid": "67605346b7a4872fa1b6dd2e"}, "className": "TestClass", "createdDate": {"$date": "2024-12-16T16:20:22.645Z"}, "actor": "TestUser", "methodName": "testCreateMethod", "params": "param1=value1", "result": "SUCCESS"}], "id": 0, "ns": "trips_helper.history_content"}, "ok": 1.0}
+2024-12-16 19:20:22 DEBUG operation:56 - Received batch of 2 documents with cursorId 0 from server localhost:27017
+2024-12-16 19:20:22 DEBUG connection:56 - Connection checked in: address=localhost:27017, driver-generated ID=3
+2024-12-16 19:20:22 DEBUG connection:56 - Checkout started for connection to localhost:27017
+2024-12-16 19:20:22 DEBUG connection:56 - Connection checked out: address=localhost:27017, driver-generated ID=3
+2024-12-16 19:20:22 DEBUG operation:56 - retryWrites set to true but the server is a standalone server.
+2024-12-16 19:20:22 DEBUG operation:56 - retryWrites set to true but the server is a standalone server.
+2024-12-16 19:20:22 DEBUG command:56 - Command "insert" started on database trips_helper using a connection with driver-generated ID 3 and server-generated ID 168 to localhost:27017. The request ID is 11 and the operation ID is 10. Command: {"insert": "history_content", "ordered": true, "$db": "trips_helper", "lsid": {"id": {"$binary": {"base64": "AI2VJjpJQiW5PA7XeHilhQ==", "subType": "04"}}}, "documents": [{"_id": {"$oid": "67605346b7a4872fa1b6dd2f"}, "className": "TestClass", "createdDate": {"$date": "2024-12-16T16:20:22.677Z"}, "actor": "TestUser", "methodName": "testCreateMethod", "params": "param1=value1", "result": "SUCCESS"}]}
+2024-12-16 19:20:22 DEBUG command:56 - Command "insert" succeeded in 2.186 ms using a connection with driver-generated ID 3 and server-generated ID 168 to localhost:27017. The request ID is 11 and the operation ID is 10. Command reply: {"n": 1, "ok": 1.0}
+2024-12-16 19:20:22 DEBUG connection:56 - Connection checked in: address=localhost:27017, driver-generated ID=3
+2024-12-16 19:20:22 DEBUG connection:56 - Checkout started for connection to localhost:27017
+2024-12-16 19:20:22 DEBUG connection:56 - Connection checked out: address=localhost:27017, driver-generated ID=3
+2024-12-16 19:20:22 DEBUG command:56 - Command "find" started on database trips_helper using a connection with driver-generated ID 3 and server-generated ID 168 to localhost:27017. The request ID is 12 and the operation ID is 11. Command: {"find": "history_content", "filter": {}, "$db": "trips_helper", "lsid": {"id": {"$binary": {"base64": "AI2VJjpJQiW5PA7XeHilhQ==", "subType": "04"}}}}
+2024-12-16 19:20:22 DEBUG command:56 - Command "find" succeeded in 1.4112 ms using a connection with driver-generated ID 3 and server-generated ID 168 to localhost:27017. The request ID is 12 and the operation ID is 11. Command reply: {"cursor": {"firstBatch": [{"_id": {"$oid": "67605346b7a4872fa1b6dd2d"}, "className": "TestClass", "createdDate": {"$date": "2024-12-16T16:20:21.742Z"}, "actor": "TestUser", "methodName": "testCreateMethod", "params": "param1=value1", "result": "SUCCESS"}, {"_id": {"$oid": "67605346b7a4872fa1b6dd2e"}, "className": "TestClass", "createdDate": {"$date": "2024-12-16T16:20:22.645Z"}, "actor": "TestUser", "methodName": "testCreateMethod", "params": "param1=value1", "result": "SUCCESS"}, {"_id": {"$oid": "67605346b7a4872fa1b6dd2f"}, "className": "TestClass", "createdDate": {"$date": "2024-12-16T16:20:22.677Z"}, "actor": "TestUser", "methodName": "testCreateMethod", "params": "param1=value1", "result": "SUCCESS"}], "id": 0, "ns": "trips_helper.history_content"}, "ok": 1.0}
+2024-12-16 19:20:22 DEBUG operation:56 - Received batch of 3 documents with cursorId 0 from server localhost:27017
+2024-12-16 19:20:22 DEBUG connection:56 - Connection checked in: address=localhost:27017, driver-generated ID=3
+2024-12-16 19:20:22 DEBUG connection:56 - Checkout started for connection to localhost:27017
+2024-12-16 19:20:22 DEBUG connection:56 - Connection checked out: address=localhost:27017, driver-generated ID=3
+2024-12-16 19:20:22 DEBUG command:56 - Command "find" started on database trips_helper using a connection with driver-generated ID 3 and server-generated ID 168 to localhost:27017. The request ID is 13 and the operation ID is 12. Command: {"find": "history_content", "filter": {}, "$db": "trips_helper", "lsid": {"id": {"$binary": {"base64": "AI2VJjpJQiW5PA7XeHilhQ==", "subType": "04"}}}}
+2024-12-16 19:20:22 DEBUG command:56 - Command "find" succeeded in 1.7198 ms using a connection with driver-generated ID 3 and server-generated ID 168 to localhost:27017. The request ID is 13 and the operation ID is 12. Command reply: {"cursor": {"firstBatch": [{"_id": {"$oid": "67605346b7a4872fa1b6dd2d"}, "className": "TestClass", "createdDate": {"$date": "2024-12-16T16:20:21.742Z"}, "actor": "TestUser", "methodName": "testCreateMethod", "params": "param1=value1", "result": "SUCCESS"}, {"_id": {"$oid": "67605346b7a4872fa1b6dd2e"}, "className": "TestClass", "createdDate": {"$date": "2024-12-16T16:20:22.645Z"}, "actor": "TestUser", "methodName": "testCreateMethod", "params": "param1=value1", "result": "SUCCESS"}, {"_id": {"$oid": "67605346b7a4872fa1b6dd2f"}, "className": "TestClass", "createdDate": {"$date": "2024-12-16T16:20:22.677Z"}, "actor": "TestUser", "methodName": "testCreateMethod", "params": "param1=value1", "result": "SUCCESS"}], "id": 0, "ns": "trips_helper.history_content"}, "ok": 1.0}
+2024-12-16 19:20:22 DEBUG operation:56 - Received batch of 3 documents with cursorId 0 from server localhost:27017
+2024-12-16 19:20:22 DEBUG connection:56 - Connection checked in: address=localhost:27017, driver-generated ID=3
+2024-12-16 19:20:22 DEBUG connection:56 - Checkout started for connection to localhost:27017
+2024-12-16 19:20:22 DEBUG connection:56 - Connection checked out: address=localhost:27017, driver-generated ID=3
+2024-12-16 19:20:22 DEBUG operation:56 - retryWrites set to true but the server is a standalone server.
+2024-12-16 19:20:22 DEBUG operation:56 - retryWrites set to true but the server is a standalone server.
+2024-12-16 19:20:22 DEBUG command:56 - Command "insert" started on database trips_helper using a connection with driver-generated ID 3 and server-generated ID 168 to localhost:27017. The request ID is 14 and the operation ID is 13. Command: {"insert": "history_content", "ordered": true, "$db": "trips_helper", "lsid": {"id": {"$binary": {"base64": "AI2VJjpJQiW5PA7XeHilhQ==", "subType": "04"}}}, "documents": [{"_id": {"$oid": "67605346b7a4872fa1b6dd30"}, "className": "TestClass", "createdDate": {"$date": "2024-12-16T16:20:22.698Z"}, "actor": "TestUser", "methodName": "testCreateMethod", "params": "param1=value1", "result": "SUCCESS"}]}
+2024-12-16 19:20:22 DEBUG command:56 - Command "insert" succeeded in 2.5533 ms using a connection with driver-generated ID 3 and server-generated ID 168 to localhost:27017. The request ID is 14 and the operation ID is 13. Command reply: {"n": 1, "ok": 1.0}
+2024-12-16 19:20:22 DEBUG connection:56 - Connection checked in: address=localhost:27017, driver-generated ID=3
+2024-12-16 19:20:22 DEBUG connection:56 - Checkout started for connection to localhost:27017
+2024-12-16 19:20:22 DEBUG connection:56 - Connection checked out: address=localhost:27017, driver-generated ID=3
+2024-12-16 19:20:22 DEBUG command:56 - Command "find" started on database trips_helper using a connection with driver-generated ID 3 and server-generated ID 168 to localhost:27017. The request ID is 15 and the operation ID is 14. Command: {"find": "history_content", "filter": {}, "$db": "trips_helper", "lsid": {"id": {"$binary": {"base64": "AI2VJjpJQiW5PA7XeHilhQ==", "subType": "04"}}}}
+2024-12-16 19:20:22 DEBUG command:56 - Command "find" succeeded in 1.7261 ms using a connection with driver-generated ID 3 and server-generated ID 168 to localhost:27017. The request ID is 15 and the operation ID is 14. Command reply: {"cursor": {"firstBatch": [{"_id": {"$oid": "67605346b7a4872fa1b6dd2d"}, "className": "TestClass", "createdDate": {"$date": "2024-12-16T16:20:21.742Z"}, "actor": "TestUser", "methodName": "testCreateMethod", "params": "param1=value1", "result": "SUCCESS"}, {"_id": {"$oid": "67605346b7a4872fa1b6dd2e"}, "className": "TestClass", "createdDate": {"$date": "2024-12-16T16:20:22.645Z"}, "actor": "TestUser", "methodName": "testCreateMethod", "params": "param1=value1", "result": "SUCCESS"}, {"_id": {"$oid": "67605346b7a4872fa1b6dd2f"}, "className": "TestClass", "createdDate": {"$date": "2024-12-16T16:20:22.677Z"}, "actor": "TestUser", "methodName": "testCreateMethod", "params": "param1=value1", "result": "SUCCESS"}, {"_id": {"$oid": "67605346b7a4872fa1b6dd30"}, "className": "TestClass", "createdDate": {"$date": "2024-12-16T16:20:22.698Z"}, "actor": "TestUser", "methodName": "testCreateMethod", "params": "param1=value1", "result": "SUCCESS"}], "id": 0, "ns": "trips_helper.history_content"}, "ok" ...
+2024-12-16 19:20:22 DEBUG operation:56 - Received batch of 4 documents with cursorId 0 from server localhost:27017
+2024-12-16 19:20:22 DEBUG connection:56 - Connection checked in: address=localhost:27017, driver-generated ID=3
+2024-12-16 19:20:22 DEBUG connection:56 - Checkout started for connection to localhost:27017
+2024-12-16 19:20:22 DEBUG connection:56 - Connection checked out: address=localhost:27017, driver-generated ID=3
+2024-12-16 19:20:22 DEBUG operation:56 - retryWrites set to true but the server is a standalone server.
+2024-12-16 19:20:22 DEBUG operation:56 - retryWrites set to true but the server is a standalone server.
+2024-12-16 19:20:22 DEBUG command:56 - Command "delete" started on database trips_helper using a connection with driver-generated ID 3 and server-generated ID 168 to localhost:27017. The request ID is 16 and the operation ID is 15. Command: {"delete": "history_content", "ordered": true, "$db": "trips_helper", "lsid": {"id": {"$binary": {"base64": "AI2VJjpJQiW5PA7XeHilhQ==", "subType": "04"}}}, "deletes": [{"q": {"_id": {"$oid": "67605346b7a4872fa1b6dd30"}}, "limit": 1}]}
+2024-12-16 19:20:22 DEBUG command:56 - Command "delete" succeeded in 2.006 ms using a connection with driver-generated ID 3 and server-generated ID 168 to localhost:27017. The request ID is 16 and the operation ID is 15. Command reply: {"n": 1, "ok": 1.0}
+2024-12-16 19:20:22 DEBUG connection:56 - Connection checked in: address=localhost:27017, driver-generated ID=3
+2024-12-16 19:20:22 DEBUG connection:56 - Checkout started for connection to localhost:27017
+2024-12-16 19:20:22 DEBUG connection:56 - Connection checked out: address=localhost:27017, driver-generated ID=3
+2024-12-16 19:20:22 DEBUG command:56 - Command "find" started on database trips_helper using a connection with driver-generated ID 3 and server-generated ID 168 to localhost:27017. The request ID is 17 and the operation ID is 16. Command: {"find": "history_content", "filter": {"_id": {"$oid": "67605346b7a4872fa1b6dd30"}}, "limit": 1, "singleBatch": true, "$db": "trips_helper", "lsid": {"id": {"$binary": {"base64": "AI2VJjpJQiW5PA7XeHilhQ==", "subType": "04"}}}}
+2024-12-16 19:20:22 DEBUG command:56 - Command "find" succeeded in 1.6437 ms using a connection with driver-generated ID 3 and server-generated ID 168 to localhost:27017. The request ID is 17 and the operation ID is 16. Command reply: {"cursor": {"firstBatch": [], "id": 0, "ns": "trips_helper.history_content"}, "ok": 1.0}
+2024-12-16 19:20:22 DEBUG operation:56 - Received batch of 0 documents with cursorId 0 from server localhost:27017
+2024-12-16 19:20:22 DEBUG connection:56 - Connection checked in: address=localhost:27017, driver-generated ID=3
+2024-12-16 19:20:22 DEBUG connection:56 - Checkout started for connection to localhost:27017
+2024-12-16 19:20:22 DEBUG connection:56 - Connection checked out: address=localhost:27017, driver-generated ID=3
+2024-12-16 19:20:22 DEBUG operation:56 - retryWrites set to true but the server is a standalone server.
+2024-12-16 19:20:22 DEBUG operation:56 - retryWrites set to true but the server is a standalone server.
+2024-12-16 19:20:22 DEBUG command:56 - Command "insert" started on database trips_helper using a connection with driver-generated ID 3 and server-generated ID 168 to localhost:27017. The request ID is 18 and the operation ID is 17. Command: {"insert": "history_content", "ordered": true, "$db": "trips_helper", "lsid": {"id": {"$binary": {"base64": "AI2VJjpJQiW5PA7XeHilhQ==", "subType": "04"}}}, "documents": [{"_id": {"$oid": "67605346b7a4872fa1b6dd31"}, "className": "TestClass", "createdDate": {"$date": "2024-12-16T16:20:22.732Z"}, "actor": "TestUser", "methodName": "testCreateMethod", "params": "param1=value1", "result": "SUCCESS"}]}
+2024-12-16 19:20:22 DEBUG command:56 - Command "insert" succeeded in 1.7526 ms using a connection with driver-generated ID 3 and server-generated ID 168 to localhost:27017. The request ID is 18 and the operation ID is 17. Command reply: {"n": 1, "ok": 1.0}
+2024-12-16 19:20:22 DEBUG connection:56 - Connection checked in: address=localhost:27017, driver-generated ID=3
+2024-12-16 19:20:22 DEBUG connection:56 - Checkout started for connection to localhost:27017
+2024-12-16 19:20:22 DEBUG connection:56 - Connection checked out: address=localhost:27017, driver-generated ID=3
+2024-12-16 19:20:22 DEBUG command:56 - Command "find" started on database trips_helper using a connection with driver-generated ID 3 and server-generated ID 168 to localhost:27017. The request ID is 19 and the operation ID is 18. Command: {"find": "history_content", "filter": {}, "$db": "trips_helper", "lsid": {"id": {"$binary": {"base64": "AI2VJjpJQiW5PA7XeHilhQ==", "subType": "04"}}}}
+2024-12-16 19:20:22 DEBUG command:56 - Command "find" succeeded in 1.7776 ms using a connection with driver-generated ID 3 and server-generated ID 168 to localhost:27017. The request ID is 19 and the operation ID is 18. Command reply: {"cursor": {"firstBatch": [{"_id": {"$oid": "67605346b7a4872fa1b6dd2d"}, "className": "TestClass", "createdDate": {"$date": "2024-12-16T16:20:21.742Z"}, "actor": "TestUser", "methodName": "testCreateMethod", "params": "param1=value1", "result": "SUCCESS"}, {"_id": {"$oid": "67605346b7a4872fa1b6dd2e"}, "className": "TestClass", "createdDate": {"$date": "2024-12-16T16:20:22.645Z"}, "actor": "TestUser", "methodName": "testCreateMethod", "params": "param1=value1", "result": "SUCCESS"}, {"_id": {"$oid": "67605346b7a4872fa1b6dd2f"}, "className": "TestClass", "createdDate": {"$date": "2024-12-16T16:20:22.677Z"}, "actor": "TestUser", "methodName": "testCreateMethod", "params": "param1=value1", "result": "SUCCESS"}, {"_id": {"$oid": "67605346b7a4872fa1b6dd31"}, "className": "TestClass", "createdDate": {"$date": "2024-12-16T16:20:22.732Z"}, "actor": "TestUser", "methodName": "testCreateMethod", "params": "param1=value1", "result": "SUCCESS"}], "id": 0, "ns": "trips_helper.history_content"}, "ok" ...
+2024-12-16 19:20:22 DEBUG operation:56 - Received batch of 4 documents with cursorId 0 from server localhost:27017
+2024-12-16 19:20:22 DEBUG connection:56 - Connection checked in: address=localhost:27017, driver-generated ID=3
+2024-12-16 19:20:22 DEBUG connection:56 - Checkout started for connection to localhost:27017
+2024-12-16 19:20:22 DEBUG connection:56 - Connection checked out: address=localhost:27017, driver-generated ID=3
+2024-12-16 19:20:22 DEBUG command:56 - Command "find" started on database trips_helper using a connection with driver-generated ID 3 and server-generated ID 168 to localhost:27017. The request ID is 20 and the operation ID is 19. Command: {"find": "history_content", "filter": {"_id": {"$oid": "67605346b7a4872fa1b6dd31"}}, "limit": 1, "singleBatch": true, "$db": "trips_helper", "lsid": {"id": {"$binary": {"base64": "AI2VJjpJQiW5PA7XeHilhQ==", "subType": "04"}}}}
+2024-12-16 19:20:22 DEBUG command:56 - Command "find" succeeded in 1.6892 ms using a connection with driver-generated ID 3 and server-generated ID 168 to localhost:27017. The request ID is 20 and the operation ID is 19. Command reply: {"cursor": {"firstBatch": [{"_id": {"$oid": "67605346b7a4872fa1b6dd31"}, "className": "TestClass", "createdDate": {"$date": "2024-12-16T16:20:22.732Z"}, "actor": "TestUser", "methodName": "testCreateMethod", "params": "param1=value1", "result": "SUCCESS"}], "id": 0, "ns": "trips_helper.history_content"}, "ok": 1.0}
+2024-12-16 19:20:22 DEBUG operation:56 - Received batch of 1 documents with cursorId 0 from server localhost:27017
+2024-12-16 19:20:22 DEBUG connection:56 - Connection checked in: address=localhost:27017, driver-generated ID=3
+2024-12-16 19:20:22 DEBUG connection:56 - Checkout started for connection to localhost:27017
+2024-12-16 19:20:22 DEBUG connection:56 - Connection checked out: address=localhost:27017, driver-generated ID=3
+2024-12-16 19:20:22 DEBUG operation:56 - retryWrites set to true but the server is a standalone server.
+2024-12-16 19:20:22 DEBUG operation:56 - retryWrites set to true but the server is a standalone server.
+2024-12-16 19:20:22 DEBUG command:56 - Command "update" started on database trips_helper using a connection with driver-generated ID 3 and server-generated ID 168 to localhost:27017. The request ID is 21 and the operation ID is 20. Command: {"update": "history_content", "ordered": true, "$db": "trips_helper", "lsid": {"id": {"$binary": {"base64": "AI2VJjpJQiW5PA7XeHilhQ==", "subType": "04"}}}, "updates": [{"q": {"_id": {"$oid": "67605346b7a4872fa1b6dd31"}}, "u": {"className": "TestClass", "createdDate": {"$date": "2024-12-16T16:20:22.732Z"}, "actor": "TestUser", "methodName": "testUpdateMethod", "params": "param1=value1", "result": "FAULT"}}]}
+2024-12-16 19:20:22 DEBUG command:56 - Command "update" succeeded in 2.0361 ms using a connection with driver-generated ID 3 and server-generated ID 168 to localhost:27017. The request ID is 21 and the operation ID is 20. Command reply: {"n": 1, "nModified": 1, "ok": 1.0}
+2024-12-16 19:20:22 DEBUG connection:56 - Connection checked in: address=localhost:27017, driver-generated ID=3
+2024-12-16 19:20:22 DEBUG connection:56 - Checkout started for connection to localhost:27017
+2024-12-16 19:20:22 DEBUG connection:56 - Connection checked out: address=localhost:27017, driver-generated ID=3
+2024-12-16 19:20:22 DEBUG command:56 - Command "find" started on database trips_helper using a connection with driver-generated ID 3 and server-generated ID 168 to localhost:27017. The request ID is 22 and the operation ID is 21. Command: {"find": "history_content", "filter": {"_id": {"$oid": "67605346b7a4872fa1b6dd31"}}, "limit": 1, "singleBatch": true, "$db": "trips_helper", "lsid": {"id": {"$binary": {"base64": "AI2VJjpJQiW5PA7XeHilhQ==", "subType": "04"}}}}
+2024-12-16 19:20:22 DEBUG command:56 - Command "find" succeeded in 1.6362 ms using a connection with driver-generated ID 3 and server-generated ID 168 to localhost:27017. The request ID is 22 and the operation ID is 21. Command reply: {"cursor": {"firstBatch": [{"_id": {"$oid": "67605346b7a4872fa1b6dd31"}, "className": "TestClass", "createdDate": {"$date": "2024-12-16T16:20:22.732Z"}, "actor": "TestUser", "methodName": "testUpdateMethod", "params": "param1=value1", "result": "FAULT"}], "id": 0, "ns": "trips_helper.history_content"}, "ok": 1.0}
+2024-12-16 19:20:22 DEBUG operation:56 - Received batch of 1 documents with cursorId 0 from server localhost:27017
+2024-12-16 19:20:22 DEBUG connection:56 - Connection checked in: address=localhost:27017, driver-generated ID=3
+2024-12-16 20:07:10 DEBUG connection:56 - Connection pool created for localhost:27017 using options maxIdleTimeMS=0, minPoolSize=0, maxPoolSize=100, maxConnecting=2, waitQueueTimeoutMS=120000
+2024-12-16 20:07:10 DEBUG cluster:56 - Updating cluster description to  {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING}]
+2024-12-16 20:07:10 INFO  client:71 - MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync", "version": "4.10.2"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/21.0.2+13-LTS-58"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@625e134e, com.mongodb.Jep395RecordCodecProvider@72bd06ca, com.mongodb.KotlinCodecProvider@89c10b7]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=UNSPECIFIED, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null}
+2024-12-16 20:07:10 INFO  cluster:71 - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=28521600}
+2024-12-16 20:07:10 DEBUG connection:56 - Connection pool ready for localhost:27017
+2024-12-16 20:07:10 DEBUG cluster:56 - Updating cluster description to  {type=STANDALONE, servers=[{address=localhost:27017, type=STANDALONE, roundTripTime=28.5 ms, state=CONNECTED}]
+2024-12-16 20:07:10 DEBUG cluster:56 - Checking status of localhost:27017
+2024-12-16 20:07:10 DEBUG connection:56 - Checkout started for connection to localhost:27017
+2024-12-16 20:07:10 DEBUG connection:56 - Connection created: address=localhost:27017, driver-generated ID=3
+2024-12-16 20:07:10 DEBUG connection:56 - Connection ready: address=localhost:27017, driver-generated ID=3
+2024-12-16 20:07:10 DEBUG connection:56 - Connection checked out: address=localhost:27017, driver-generated ID=3
+2024-12-16 20:07:10 DEBUG operation:56 - retryWrites set to true but the server is a standalone server.
+2024-12-16 20:07:10 DEBUG operation:56 - retryWrites set to true but the server is a standalone server.
+2024-12-16 20:07:10 DEBUG command:56 - Command "insert" started on database trips_helper using a connection with driver-generated ID 3 and server-generated ID 171 to localhost:27017. The request ID is 5 and the operation ID is 3. Command: {"insert": "history_content", "ordered": true, "$db": "trips_helper", "lsid": {"id": {"$binary": {"base64": "HPT7HNcnQjqEDMv01C4TLQ==", "subType": "04"}}}, "documents": [{"_id": {"$oid": "67605e3e725ccd129f8a0841"}, "className": "TestClass", "createdDate": {"$date": "2024-12-16T17:07:09.872Z"}, "actor": "TestUser", "methodName": "testCreateMethod", "params": "param1=value1", "result": "SUCCESS"}]}
+2024-12-16 20:07:10 DEBUG command:56 - Command "insert" succeeded in 11.3735 ms using a connection with driver-generated ID 3 and server-generated ID 171 to localhost:27017. The request ID is 5 and the operation ID is 3. Command reply: {"n": 1, "ok": 1.0}
+2024-12-16 20:07:10 DEBUG connection:56 - Connection checked in: address=localhost:27017, driver-generated ID=3
+2024-12-16 20:07:10 DEBUG connection:56 - Checkout started for connection to localhost:27017
+2024-12-16 20:07:10 DEBUG connection:56 - Connection checked out: address=localhost:27017, driver-generated ID=3
+2024-12-16 20:07:10 DEBUG command:56 - Command "find" started on database trips_helper using a connection with driver-generated ID 3 and server-generated ID 171 to localhost:27017. The request ID is 6 and the operation ID is 5. Command: {"find": "history_content", "filter": {}, "$db": "trips_helper", "lsid": {"id": {"$binary": {"base64": "HPT7HNcnQjqEDMv01C4TLQ==", "subType": "04"}}}}
+2024-12-16 20:07:10 DEBUG command:56 - Command "find" succeeded in 2.2578 ms using a connection with driver-generated ID 3 and server-generated ID 171 to localhost:27017. The request ID is 6 and the operation ID is 5. Command reply: {"cursor": {"firstBatch": [{"_id": {"$oid": "67605e3e725ccd129f8a0841"}, "className": "TestClass", "createdDate": {"$date": "2024-12-16T17:07:09.872Z"}, "actor": "TestUser", "methodName": "testCreateMethod", "params": "param1=value1", "result": "SUCCESS"}], "id": 0, "ns": "trips_helper.history_content"}, "ok": 1.0}
+2024-12-16 20:07:10 DEBUG operation:56 - Received batch of 1 documents with cursorId 0 from server localhost:27017
+2024-12-16 20:07:10 DEBUG connection:56 - Connection checked in: address=localhost:27017, driver-generated ID=3
+2024-12-16 20:07:10 DEBUG connection:56 - Checkout started for connection to localhost:27017
+2024-12-16 20:07:10 DEBUG connection:56 - Connection checked out: address=localhost:27017, driver-generated ID=3
+2024-12-16 20:07:10 DEBUG command:56 - Command "find" started on database trips_helper using a connection with driver-generated ID 3 and server-generated ID 171 to localhost:27017. The request ID is 7 and the operation ID is 6. Command: {"find": "history_content", "filter": {"_id": {"$oid": "67605e3e725ccd129f8a0841"}}, "limit": 1, "singleBatch": true, "$db": "trips_helper", "lsid": {"id": {"$binary": {"base64": "HPT7HNcnQjqEDMv01C4TLQ==", "subType": "04"}}}}
+2024-12-16 20:07:10 DEBUG command:56 - Command "find" succeeded in 1.4022 ms using a connection with driver-generated ID 3 and server-generated ID 171 to localhost:27017. The request ID is 7 and the operation ID is 6. Command reply: {"cursor": {"firstBatch": [{"_id": {"$oid": "67605e3e725ccd129f8a0841"}, "className": "TestClass", "createdDate": {"$date": "2024-12-16T17:07:09.872Z"}, "actor": "TestUser", "methodName": "testCreateMethod", "params": "param1=value1", "result": "SUCCESS"}], "id": 0, "ns": "trips_helper.history_content"}, "ok": 1.0}
+2024-12-16 20:07:10 DEBUG operation:56 - Received batch of 1 documents with cursorId 0 from server localhost:27017
+2024-12-16 20:07:10 DEBUG connection:56 - Connection checked in: address=localhost:27017, driver-generated ID=3
+2024-12-16 20:07:10 DEBUG connection:56 - Checkout started for connection to localhost:27017
+2024-12-16 20:07:10 DEBUG connection:56 - Connection checked out: address=localhost:27017, driver-generated ID=3
+2024-12-16 20:07:10 DEBUG operation:56 - retryWrites set to true but the server is a standalone server.
+2024-12-16 20:07:10 DEBUG operation:56 - retryWrites set to true but the server is a standalone server.
+2024-12-16 20:07:10 DEBUG command:56 - Command "insert" started on database trips_helper using a connection with driver-generated ID 3 and server-generated ID 171 to localhost:27017. The request ID is 8 and the operation ID is 7. Command: {"insert": "history_content", "ordered": true, "$db": "trips_helper", "lsid": {"id": {"$binary": {"base64": "HPT7HNcnQjqEDMv01C4TLQ==", "subType": "04"}}}, "documents": [{"_id": {"$oid": "67605e3e725ccd129f8a0842"}, "className": "TestClass", "createdDate": {"$date": "2024-12-16T17:07:10.813Z"}, "actor": "TestUser", "methodName": "testCreateMethod", "params": "param1=value1", "result": "SUCCESS"}]}
+2024-12-16 20:07:10 DEBUG command:56 - Command "insert" succeeded in 2.3501 ms using a connection with driver-generated ID 3 and server-generated ID 171 to localhost:27017. The request ID is 8 and the operation ID is 7. Command reply: {"n": 1, "ok": 1.0}
+2024-12-16 20:07:10 DEBUG connection:56 - Connection checked in: address=localhost:27017, driver-generated ID=3
+2024-12-16 20:07:10 DEBUG connection:56 - Checkout started for connection to localhost:27017
+2024-12-16 20:07:10 DEBUG connection:56 - Connection checked out: address=localhost:27017, driver-generated ID=3
+2024-12-16 20:07:10 DEBUG command:56 - Command "find" started on database trips_helper using a connection with driver-generated ID 3 and server-generated ID 171 to localhost:27017. The request ID is 9 and the operation ID is 8. Command: {"find": "history_content", "filter": {}, "$db": "trips_helper", "lsid": {"id": {"$binary": {"base64": "HPT7HNcnQjqEDMv01C4TLQ==", "subType": "04"}}}}
+2024-12-16 20:07:10 DEBUG command:56 - Command "find" succeeded in 1.2636 ms using a connection with driver-generated ID 3 and server-generated ID 171 to localhost:27017. The request ID is 9 and the operation ID is 8. Command reply: {"cursor": {"firstBatch": [{"_id": {"$oid": "67605e3e725ccd129f8a0841"}, "className": "TestClass", "createdDate": {"$date": "2024-12-16T17:07:09.872Z"}, "actor": "TestUser", "methodName": "testCreateMethod", "params": "param1=value1", "result": "SUCCESS"}, {"_id": {"$oid": "67605e3e725ccd129f8a0842"}, "className": "TestClass", "createdDate": {"$date": "2024-12-16T17:07:10.813Z"}, "actor": "TestUser", "methodName": "testCreateMethod", "params": "param1=value1", "result": "SUCCESS"}], "id": 0, "ns": "trips_helper.history_content"}, "ok": 1.0}
+2024-12-16 20:07:10 DEBUG operation:56 - Received batch of 2 documents with cursorId 0 from server localhost:27017
+2024-12-16 20:07:10 DEBUG connection:56 - Connection checked in: address=localhost:27017, driver-generated ID=3
+2024-12-16 20:07:10 DEBUG connection:56 - Checkout started for connection to localhost:27017
+2024-12-16 20:07:10 DEBUG connection:56 - Connection checked out: address=localhost:27017, driver-generated ID=3
+2024-12-16 20:07:10 DEBUG command:56 - Command "find" started on database trips_helper using a connection with driver-generated ID 3 and server-generated ID 171 to localhost:27017. The request ID is 10 and the operation ID is 9. Command: {"find": "history_content", "filter": {}, "$db": "trips_helper", "lsid": {"id": {"$binary": {"base64": "HPT7HNcnQjqEDMv01C4TLQ==", "subType": "04"}}}}
+2024-12-16 20:07:10 DEBUG command:56 - Command "find" succeeded in 1.1541 ms using a connection with driver-generated ID 3 and server-generated ID 171 to localhost:27017. The request ID is 10 and the operation ID is 9. Command reply: {"cursor": {"firstBatch": [{"_id": {"$oid": "67605e3e725ccd129f8a0841"}, "className": "TestClass", "createdDate": {"$date": "2024-12-16T17:07:09.872Z"}, "actor": "TestUser", "methodName": "testCreateMethod", "params": "param1=value1", "result": "SUCCESS"}, {"_id": {"$oid": "67605e3e725ccd129f8a0842"}, "className": "TestClass", "createdDate": {"$date": "2024-12-16T17:07:10.813Z"}, "actor": "TestUser", "methodName": "testCreateMethod", "params": "param1=value1", "result": "SUCCESS"}], "id": 0, "ns": "trips_helper.history_content"}, "ok": 1.0}
+2024-12-16 20:07:10 DEBUG operation:56 - Received batch of 2 documents with cursorId 0 from server localhost:27017
+2024-12-16 20:07:10 DEBUG connection:56 - Connection checked in: address=localhost:27017, driver-generated ID=3
+2024-12-16 20:07:10 DEBUG connection:56 - Checkout started for connection to localhost:27017
+2024-12-16 20:07:10 DEBUG connection:56 - Connection checked out: address=localhost:27017, driver-generated ID=3
+2024-12-16 20:07:10 DEBUG operation:56 - retryWrites set to true but the server is a standalone server.
+2024-12-16 20:07:10 DEBUG operation:56 - retryWrites set to true but the server is a standalone server.
+2024-12-16 20:07:10 DEBUG command:56 - Command "insert" started on database trips_helper using a connection with driver-generated ID 3 and server-generated ID 171 to localhost:27017. The request ID is 11 and the operation ID is 10. Command: {"insert": "history_content", "ordered": true, "$db": "trips_helper", "lsid": {"id": {"$binary": {"base64": "HPT7HNcnQjqEDMv01C4TLQ==", "subType": "04"}}}, "documents": [{"_id": {"$oid": "67605e3e725ccd129f8a0843"}, "className": "TestClass", "createdDate": {"$date": "2024-12-16T17:07:10.831Z"}, "actor": "TestUser", "methodName": "testCreateMethod", "params": "param1=value1", "result": "SUCCESS"}]}
+2024-12-16 20:07:10 DEBUG command:56 - Command "insert" succeeded in 1.3256 ms using a connection with driver-generated ID 3 and server-generated ID 171 to localhost:27017. The request ID is 11 and the operation ID is 10. Command reply: {"n": 1, "ok": 1.0}
+2024-12-16 20:07:10 DEBUG connection:56 - Connection checked in: address=localhost:27017, driver-generated ID=3
+2024-12-16 20:07:10 DEBUG connection:56 - Checkout started for connection to localhost:27017
+2024-12-16 20:07:10 DEBUG connection:56 - Connection checked out: address=localhost:27017, driver-generated ID=3
+2024-12-16 20:07:10 DEBUG command:56 - Command "find" started on database trips_helper using a connection with driver-generated ID 3 and server-generated ID 171 to localhost:27017. The request ID is 12 and the operation ID is 11. Command: {"find": "history_content", "filter": {}, "$db": "trips_helper", "lsid": {"id": {"$binary": {"base64": "HPT7HNcnQjqEDMv01C4TLQ==", "subType": "04"}}}}
+2024-12-16 20:07:10 DEBUG command:56 - Command "find" succeeded in 0.9159 ms using a connection with driver-generated ID 3 and server-generated ID 171 to localhost:27017. The request ID is 12 and the operation ID is 11. Command reply: {"cursor": {"firstBatch": [{"_id": {"$oid": "67605e3e725ccd129f8a0841"}, "className": "TestClass", "createdDate": {"$date": "2024-12-16T17:07:09.872Z"}, "actor": "TestUser", "methodName": "testCreateMethod", "params": "param1=value1", "result": "SUCCESS"}, {"_id": {"$oid": "67605e3e725ccd129f8a0842"}, "className": "TestClass", "createdDate": {"$date": "2024-12-16T17:07:10.813Z"}, "actor": "TestUser", "methodName": "testCreateMethod", "params": "param1=value1", "result": "SUCCESS"}, {"_id": {"$oid": "67605e3e725ccd129f8a0843"}, "className": "TestClass", "createdDate": {"$date": "2024-12-16T17:07:10.831Z"}, "actor": "TestUser", "methodName": "testCreateMethod", "params": "param1=value1", "result": "SUCCESS"}], "id": 0, "ns": "trips_helper.history_content"}, "ok": 1.0}
+2024-12-16 20:07:10 DEBUG operation:56 - Received batch of 3 documents with cursorId 0 from server localhost:27017
+2024-12-16 20:07:10 DEBUG connection:56 - Connection checked in: address=localhost:27017, driver-generated ID=3
+2024-12-16 20:07:10 DEBUG connection:56 - Checkout started for connection to localhost:27017
+2024-12-16 20:07:10 DEBUG connection:56 - Connection checked out: address=localhost:27017, driver-generated ID=3
+2024-12-16 20:07:10 DEBUG command:56 - Command "find" started on database trips_helper using a connection with driver-generated ID 3 and server-generated ID 171 to localhost:27017. The request ID is 13 and the operation ID is 12. Command: {"find": "history_content", "filter": {}, "$db": "trips_helper", "lsid": {"id": {"$binary": {"base64": "HPT7HNcnQjqEDMv01C4TLQ==", "subType": "04"}}}}
+2024-12-16 20:07:10 DEBUG command:56 - Command "find" succeeded in 0.8393 ms using a connection with driver-generated ID 3 and server-generated ID 171 to localhost:27017. The request ID is 13 and the operation ID is 12. Command reply: {"cursor": {"firstBatch": [{"_id": {"$oid": "67605e3e725ccd129f8a0841"}, "className": "TestClass", "createdDate": {"$date": "2024-12-16T17:07:09.872Z"}, "actor": "TestUser", "methodName": "testCreateMethod", "params": "param1=value1", "result": "SUCCESS"}, {"_id": {"$oid": "67605e3e725ccd129f8a0842"}, "className": "TestClass", "createdDate": {"$date": "2024-12-16T17:07:10.813Z"}, "actor": "TestUser", "methodName": "testCreateMethod", "params": "param1=value1", "result": "SUCCESS"}, {"_id": {"$oid": "67605e3e725ccd129f8a0843"}, "className": "TestClass", "createdDate": {"$date": "2024-12-16T17:07:10.831Z"}, "actor": "TestUser", "methodName": "testCreateMethod", "params": "param1=value1", "result": "SUCCESS"}], "id": 0, "ns": "trips_helper.history_content"}, "ok": 1.0}
+2024-12-16 20:07:10 DEBUG operation:56 - Received batch of 3 documents with cursorId 0 from server localhost:27017
+2024-12-16 20:07:10 DEBUG connection:56 - Connection checked in: address=localhost:27017, driver-generated ID=3
+2024-12-16 20:07:10 DEBUG connection:56 - Checkout started for connection to localhost:27017
+2024-12-16 20:07:10 DEBUG connection:56 - Connection checked out: address=localhost:27017, driver-generated ID=3
+2024-12-16 20:07:10 DEBUG operation:56 - retryWrites set to true but the server is a standalone server.
+2024-12-16 20:07:10 DEBUG operation:56 - retryWrites set to true but the server is a standalone server.
+2024-12-16 20:07:10 DEBUG command:56 - Command "insert" started on database trips_helper using a connection with driver-generated ID 3 and server-generated ID 171 to localhost:27017. The request ID is 14 and the operation ID is 13. Command: {"insert": "history_content", "ordered": true, "$db": "trips_helper", "lsid": {"id": {"$binary": {"base64": "HPT7HNcnQjqEDMv01C4TLQ==", "subType": "04"}}}, "documents": [{"_id": {"$oid": "67605e3e725ccd129f8a0844"}, "className": "TestClass", "createdDate": {"$date": "2024-12-16T17:07:10.844Z"}, "actor": "TestUser", "methodName": "testCreateMethod", "params": "param1=value1", "result": "SUCCESS"}]}
+2024-12-16 20:07:10 DEBUG command:56 - Command "insert" succeeded in 2.382 ms using a connection with driver-generated ID 3 and server-generated ID 171 to localhost:27017. The request ID is 14 and the operation ID is 13. Command reply: {"n": 1, "ok": 1.0}
+2024-12-16 20:07:10 DEBUG connection:56 - Connection checked in: address=localhost:27017, driver-generated ID=3
+2024-12-16 20:07:10 DEBUG connection:56 - Checkout started for connection to localhost:27017
+2024-12-16 20:07:10 DEBUG connection:56 - Connection checked out: address=localhost:27017, driver-generated ID=3
+2024-12-16 20:07:10 DEBUG command:56 - Command "find" started on database trips_helper using a connection with driver-generated ID 3 and server-generated ID 171 to localhost:27017. The request ID is 15 and the operation ID is 14. Command: {"find": "history_content", "filter": {}, "$db": "trips_helper", "lsid": {"id": {"$binary": {"base64": "HPT7HNcnQjqEDMv01C4TLQ==", "subType": "04"}}}}
+2024-12-16 20:07:10 DEBUG command:56 - Command "find" succeeded in 1.1499 ms using a connection with driver-generated ID 3 and server-generated ID 171 to localhost:27017. The request ID is 15 and the operation ID is 14. Command reply: {"cursor": {"firstBatch": [{"_id": {"$oid": "67605e3e725ccd129f8a0841"}, "className": "TestClass", "createdDate": {"$date": "2024-12-16T17:07:09.872Z"}, "actor": "TestUser", "methodName": "testCreateMethod", "params": "param1=value1", "result": "SUCCESS"}, {"_id": {"$oid": "67605e3e725ccd129f8a0842"}, "className": "TestClass", "createdDate": {"$date": "2024-12-16T17:07:10.813Z"}, "actor": "TestUser", "methodName": "testCreateMethod", "params": "param1=value1", "result": "SUCCESS"}, {"_id": {"$oid": "67605e3e725ccd129f8a0843"}, "className": "TestClass", "createdDate": {"$date": "2024-12-16T17:07:10.831Z"}, "actor": "TestUser", "methodName": "testCreateMethod", "params": "param1=value1", "result": "SUCCESS"}, {"_id": {"$oid": "67605e3e725ccd129f8a0844"}, "className": "TestClass", "createdDate": {"$date": "2024-12-16T17:07:10.844Z"}, "actor": "TestUser", "methodName": "testCreateMethod", "params": "param1=value1", "result": "SUCCESS"}], "id": 0, "ns": "trips_helper.history_content"}, "ok" ...
+2024-12-16 20:07:10 DEBUG operation:56 - Received batch of 4 documents with cursorId 0 from server localhost:27017
+2024-12-16 20:07:10 DEBUG connection:56 - Connection checked in: address=localhost:27017, driver-generated ID=3
+2024-12-16 20:07:10 DEBUG connection:56 - Checkout started for connection to localhost:27017
+2024-12-16 20:07:10 DEBUG connection:56 - Connection checked out: address=localhost:27017, driver-generated ID=3
+2024-12-16 20:07:10 DEBUG operation:56 - retryWrites set to true but the server is a standalone server.
+2024-12-16 20:07:10 DEBUG operation:56 - retryWrites set to true but the server is a standalone server.
+2024-12-16 20:07:10 DEBUG command:56 - Command "delete" started on database trips_helper using a connection with driver-generated ID 3 and server-generated ID 171 to localhost:27017. The request ID is 16 and the operation ID is 15. Command: {"delete": "history_content", "ordered": true, "$db": "trips_helper", "lsid": {"id": {"$binary": {"base64": "HPT7HNcnQjqEDMv01C4TLQ==", "subType": "04"}}}, "deletes": [{"q": {"_id": {"$oid": "67605e3e725ccd129f8a0844"}}, "limit": 1}]}
+2024-12-16 20:07:10 DEBUG command:56 - Command "delete" succeeded in 1.8336 ms using a connection with driver-generated ID 3 and server-generated ID 171 to localhost:27017. The request ID is 16 and the operation ID is 15. Command reply: {"n": 1, "ok": 1.0}
+2024-12-16 20:07:10 DEBUG connection:56 - Connection checked in: address=localhost:27017, driver-generated ID=3
+2024-12-16 20:07:10 DEBUG connection:56 - Checkout started for connection to localhost:27017
+2024-12-16 20:07:10 DEBUG connection:56 - Connection checked out: address=localhost:27017, driver-generated ID=3
+2024-12-16 20:07:10 DEBUG command:56 - Command "find" started on database trips_helper using a connection with driver-generated ID 3 and server-generated ID 171 to localhost:27017. The request ID is 17 and the operation ID is 16. Command: {"find": "history_content", "filter": {"_id": {"$oid": "67605e3e725ccd129f8a0844"}}, "limit": 1, "singleBatch": true, "$db": "trips_helper", "lsid": {"id": {"$binary": {"base64": "HPT7HNcnQjqEDMv01C4TLQ==", "subType": "04"}}}}
+2024-12-16 20:07:10 DEBUG command:56 - Command "find" succeeded in 1.3944 ms using a connection with driver-generated ID 3 and server-generated ID 171 to localhost:27017. The request ID is 17 and the operation ID is 16. Command reply: {"cursor": {"firstBatch": [], "id": 0, "ns": "trips_helper.history_content"}, "ok": 1.0}
+2024-12-16 20:07:10 DEBUG operation:56 - Received batch of 0 documents with cursorId 0 from server localhost:27017
+2024-12-16 20:07:10 DEBUG connection:56 - Connection checked in: address=localhost:27017, driver-generated ID=3
+2024-12-16 20:07:10 DEBUG connection:56 - Checkout started for connection to localhost:27017
+2024-12-16 20:07:10 DEBUG connection:56 - Connection checked out: address=localhost:27017, driver-generated ID=3
+2024-12-16 20:07:10 DEBUG operation:56 - retryWrites set to true but the server is a standalone server.
+2024-12-16 20:07:10 DEBUG operation:56 - retryWrites set to true but the server is a standalone server.
+2024-12-16 20:07:10 DEBUG command:56 - Command "insert" started on database trips_helper using a connection with driver-generated ID 3 and server-generated ID 171 to localhost:27017. The request ID is 18 and the operation ID is 17. Command: {"insert": "history_content", "ordered": true, "$db": "trips_helper", "lsid": {"id": {"$binary": {"base64": "HPT7HNcnQjqEDMv01C4TLQ==", "subType": "04"}}}, "documents": [{"_id": {"$oid": "67605e3e725ccd129f8a0845"}, "className": "TestClass", "createdDate": {"$date": "2024-12-16T17:07:10.87Z"}, "actor": "TestUser", "methodName": "testCreateMethod", "params": "param1=value1", "result": "SUCCESS"}]}
+2024-12-16 20:07:10 DEBUG command:56 - Command "insert" succeeded in 1.8316 ms using a connection with driver-generated ID 3 and server-generated ID 171 to localhost:27017. The request ID is 18 and the operation ID is 17. Command reply: {"n": 1, "ok": 1.0}
+2024-12-16 20:07:10 DEBUG connection:56 - Connection checked in: address=localhost:27017, driver-generated ID=3
+2024-12-16 20:07:10 DEBUG connection:56 - Checkout started for connection to localhost:27017
+2024-12-16 20:07:10 DEBUG connection:56 - Connection checked out: address=localhost:27017, driver-generated ID=3
+2024-12-16 20:07:10 DEBUG command:56 - Command "find" started on database trips_helper using a connection with driver-generated ID 3 and server-generated ID 171 to localhost:27017. The request ID is 19 and the operation ID is 18. Command: {"find": "history_content", "filter": {}, "$db": "trips_helper", "lsid": {"id": {"$binary": {"base64": "HPT7HNcnQjqEDMv01C4TLQ==", "subType": "04"}}}}
+2024-12-16 20:07:10 DEBUG command:56 - Command "find" succeeded in 1.2789 ms using a connection with driver-generated ID 3 and server-generated ID 171 to localhost:27017. The request ID is 19 and the operation ID is 18. Command reply: {"cursor": {"firstBatch": [{"_id": {"$oid": "67605e3e725ccd129f8a0841"}, "className": "TestClass", "createdDate": {"$date": "2024-12-16T17:07:09.872Z"}, "actor": "TestUser", "methodName": "testCreateMethod", "params": "param1=value1", "result": "SUCCESS"}, {"_id": {"$oid": "67605e3e725ccd129f8a0842"}, "className": "TestClass", "createdDate": {"$date": "2024-12-16T17:07:10.813Z"}, "actor": "TestUser", "methodName": "testCreateMethod", "params": "param1=value1", "result": "SUCCESS"}, {"_id": {"$oid": "67605e3e725ccd129f8a0843"}, "className": "TestClass", "createdDate": {"$date": "2024-12-16T17:07:10.831Z"}, "actor": "TestUser", "methodName": "testCreateMethod", "params": "param1=value1", "result": "SUCCESS"}, {"_id": {"$oid": "67605e3e725ccd129f8a0845"}, "className": "TestClass", "createdDate": {"$date": "2024-12-16T17:07:10.87Z"}, "actor": "TestUser", "methodName": "testCreateMethod", "params": "param1=value1", "result": "SUCCESS"}], "id": 0, "ns": "trips_helper.history_content"}, "ok": ...
+2024-12-16 20:07:10 DEBUG operation:56 - Received batch of 4 documents with cursorId 0 from server localhost:27017
+2024-12-16 20:07:10 DEBUG connection:56 - Connection checked in: address=localhost:27017, driver-generated ID=3
+2024-12-16 20:07:10 DEBUG connection:56 - Checkout started for connection to localhost:27017
+2024-12-16 20:07:10 DEBUG connection:56 - Connection checked out: address=localhost:27017, driver-generated ID=3
+2024-12-16 20:07:10 DEBUG command:56 - Command "find" started on database trips_helper using a connection with driver-generated ID 3 and server-generated ID 171 to localhost:27017. The request ID is 20 and the operation ID is 19. Command: {"find": "history_content", "filter": {"_id": {"$oid": "67605e3e725ccd129f8a0845"}}, "limit": 1, "singleBatch": true, "$db": "trips_helper", "lsid": {"id": {"$binary": {"base64": "HPT7HNcnQjqEDMv01C4TLQ==", "subType": "04"}}}}
+2024-12-16 20:07:10 DEBUG command:56 - Command "find" succeeded in 1.7629 ms using a connection with driver-generated ID 3 and server-generated ID 171 to localhost:27017. The request ID is 20 and the operation ID is 19. Command reply: {"cursor": {"firstBatch": [{"_id": {"$oid": "67605e3e725ccd129f8a0845"}, "className": "TestClass", "createdDate": {"$date": "2024-12-16T17:07:10.87Z"}, "actor": "TestUser", "methodName": "testCreateMethod", "params": "param1=value1", "result": "SUCCESS"}], "id": 0, "ns": "trips_helper.history_content"}, "ok": 1.0}
+2024-12-16 20:07:10 DEBUG operation:56 - Received batch of 1 documents with cursorId 0 from server localhost:27017
+2024-12-16 20:07:10 DEBUG connection:56 - Connection checked in: address=localhost:27017, driver-generated ID=3
+2024-12-16 20:07:10 DEBUG connection:56 - Checkout started for connection to localhost:27017
+2024-12-16 20:07:10 DEBUG connection:56 - Connection checked out: address=localhost:27017, driver-generated ID=3
+2024-12-16 20:07:10 DEBUG operation:56 - retryWrites set to true but the server is a standalone server.
+2024-12-16 20:07:10 DEBUG operation:56 - retryWrites set to true but the server is a standalone server.
+2024-12-16 20:07:10 DEBUG command:56 - Command "update" started on database trips_helper using a connection with driver-generated ID 3 and server-generated ID 171 to localhost:27017. The request ID is 21 and the operation ID is 20. Command: {"update": "history_content", "ordered": true, "$db": "trips_helper", "lsid": {"id": {"$binary": {"base64": "HPT7HNcnQjqEDMv01C4TLQ==", "subType": "04"}}}, "updates": [{"q": {"_id": {"$oid": "67605e3e725ccd129f8a0845"}}, "u": {"className": "TestClass", "createdDate": {"$date": "2024-12-16T17:07:10.87Z"}, "actor": "TestUser", "methodName": "testUpdateMethod", "params": "param1=value1", "result": "FAULT"}}]}
+2024-12-16 20:07:10 DEBUG command:56 - Command "update" succeeded in 1.821 ms using a connection with driver-generated ID 3 and server-generated ID 171 to localhost:27017. The request ID is 21 and the operation ID is 20. Command reply: {"n": 1, "nModified": 1, "ok": 1.0}
+2024-12-16 20:07:10 DEBUG connection:56 - Connection checked in: address=localhost:27017, driver-generated ID=3
+2024-12-16 20:07:10 DEBUG connection:56 - Checkout started for connection to localhost:27017
+2024-12-16 20:07:10 DEBUG connection:56 - Connection checked out: address=localhost:27017, driver-generated ID=3
+2024-12-16 20:07:10 DEBUG command:56 - Command "find" started on database trips_helper using a connection with driver-generated ID 3 and server-generated ID 171 to localhost:27017. The request ID is 22 and the operation ID is 21. Command: {"find": "history_content", "filter": {"_id": {"$oid": "67605e3e725ccd129f8a0845"}}, "limit": 1, "singleBatch": true, "$db": "trips_helper", "lsid": {"id": {"$binary": {"base64": "HPT7HNcnQjqEDMv01C4TLQ==", "subType": "04"}}}}
+2024-12-16 20:07:10 DEBUG command:56 - Command "find" succeeded in 1.2918 ms using a connection with driver-generated ID 3 and server-generated ID 171 to localhost:27017. The request ID is 22 and the operation ID is 21. Command reply: {"cursor": {"firstBatch": [{"_id": {"$oid": "67605e3e725ccd129f8a0845"}, "className": "TestClass", "createdDate": {"$date": "2024-12-16T17:07:10.87Z"}, "actor": "TestUser", "methodName": "testUpdateMethod", "params": "param1=value1", "result": "FAULT"}], "id": 0, "ns": "trips_helper.history_content"}, "ok": 1.0}
+2024-12-16 20:07:10 DEBUG operation:56 - Received batch of 1 documents with cursorId 0 from server localhost:27017
+2024-12-16 20:07:10 DEBUG connection:56 - Connection checked in: address=localhost:27017, driver-generated ID=3
+2024-12-23 00:36:17 INFO  DataProviderCSV:28 - Файл существует: false
+2024-12-23 00:36:17 INFO  DataProviderCSV:42 - Записываю заголовки: [id, name, email, trip]
+2024-12-23 00:36:17 INFO  DataProviderCSV:51 - Записываю запись: ru.sfedu.tripshelperpack.models.User@3c9bfddc
+2024-12-23 00:36:17 INFO  DataProviderCSV:53 - Запись успешно сохранена.
+2024-12-23 00:36:17 INFO  DataProviderCSV:28 - Файл существует: true
+2024-12-23 00:36:17 INFO  DataProviderCSV:51 - Записываю запись: ru.sfedu.tripshelperpack.models.User@e84a8e1
+2024-12-23 00:36:17 INFO  DataProviderCSV:53 - Запись успешно сохранена.
+2024-12-23 00:36:17 INFO  DataProviderCSV:129 - Загруженные записи: 
+2024-12-23 00:36:17 INFO  DataProviderCSV:130 - Запись: ru.sfedu.tripshelperpack.models.User@463b4ac8
+2024-12-23 00:36:17 INFO  DataProviderCSV:130 - Запись: ru.sfedu.tripshelperpack.models.User@765f05af
+2024-12-23 00:36:17 INFO  DataProviderCSV:94 - Загружены записи для поиска по ID.
+2024-12-23 00:36:17 INFO  DataProviderCSV:28 - Файл существует: false
+2024-12-23 00:36:17 INFO  DataProviderCSV:42 - Записываю заголовки: [id, name, email, trip]
+2024-12-23 00:36:17 INFO  DataProviderCSV:51 - Записываю запись: ru.sfedu.tripshelperpack.models.User@57459491
+2024-12-23 00:36:17 INFO  DataProviderCSV:53 - Запись успешно сохранена.
+2024-12-23 00:36:17 INFO  DataProviderCSV:28 - Файл существует: true
+2024-12-23 00:36:17 INFO  DataProviderCSV:51 - Записываю запись: ru.sfedu.tripshelperpack.models.User@3f0846c6
+2024-12-23 00:36:17 INFO  DataProviderCSV:53 - Запись успешно сохранена.
+2024-12-23 00:36:17 INFO  DataProviderCSV:129 - Загруженные записи: 
+2024-12-23 00:36:17 INFO  DataProviderCSV:130 - Запись: ru.sfedu.tripshelperpack.models.User@3fa2213
+2024-12-23 00:36:17 INFO  DataProviderCSV:130 - Запись: ru.sfedu.tripshelperpack.models.User@3e7634b9
+2024-12-23 00:36:17 INFO  DataProviderCSV:64 - Загружены записи для удаления.
+2024-12-23 00:36:17 INFO  DataProviderCSV:82 - Запись с ID 1 успешно удалена.
+2024-12-23 00:36:17 INFO  DataProviderCSV:129 - Загруженные записи: 
+2024-12-23 00:36:17 INFO  DataProviderCSV:130 - Запись: ru.sfedu.tripshelperpack.models.User@40cb698e
+2024-12-23 00:36:17 INFO  DataProviderCSV:28 - Файл существует: false
+2024-12-23 00:36:17 INFO  DataProviderCSV:42 - Записываю заголовки: [id, name, email, trip]
+2024-12-23 00:36:17 INFO  DataProviderCSV:51 - Записываю запись: ru.sfedu.tripshelperpack.models.User@3382f8ae
+2024-12-23 00:36:17 INFO  DataProviderCSV:53 - Запись успешно сохранена.
+2024-12-23 00:36:17 INFO  DataProviderCSV:129 - Загруженные записи: 
+2024-12-23 00:36:17 INFO  DataProviderCSV:130 - Запись: ru.sfedu.tripshelperpack.models.User@674658f7
+2024-12-23 00:36:17 INFO  DataProviderCSV:28 - Файл существует: false
+2024-12-23 00:36:17 INFO  DataProviderCSV:42 - Записываю заголовки: [id, name, email, trip]
+2024-12-23 00:36:17 INFO  DataProviderCSV:51 - Записываю запись: ru.sfedu.tripshelperpack.models.User@5c8eee0f
+2024-12-23 00:36:17 INFO  DataProviderCSV:53 - Запись успешно сохранена.
+2024-12-23 00:36:17 INFO  DataProviderCSV:28 - Файл существует: true
+2024-12-23 00:36:17 INFO  DataProviderCSV:51 - Записываю запись: ru.sfedu.tripshelperpack.models.User@565b064f
+2024-12-23 00:36:17 INFO  DataProviderCSV:53 - Запись успешно сохранена.
+2024-12-23 00:36:17 INFO  DataProviderCSV:129 - Загруженные записи: 
+2024-12-23 00:36:17 INFO  DataProviderCSV:130 - Запись: ru.sfedu.tripshelperpack.models.User@53d1b9b3
+2024-12-23 00:36:17 INFO  DataProviderCSV:130 - Запись: ru.sfedu.tripshelperpack.models.User@2cae1042
+2024-12-23 00:40:07 INFO  DataProviderCSV:28 - Файл существует: false
+2024-12-23 00:40:07 INFO  DataProviderCSV:42 - Записываю заголовки: [id, name, location, rating]
+2024-12-23 00:40:07 INFO  DataProviderCSV:51 - Записываю запись: ru.sfedu.tripshelperpack.models.Attraction@2cc3ad05
+2024-12-23 00:40:07 INFO  DataProviderCSV:53 - Запись успешно сохранена.
+2024-12-23 00:40:07 INFO  DataProviderCSV:129 - Загруженные записи: 
+2024-12-23 00:40:07 INFO  DataProviderCSV:130 - Запись: ru.sfedu.tripshelperpack.models.Attraction@3d3ba765
+2024-12-23 00:41:25 INFO  DataProviderCSV:28 - Файл существует: false
+2024-12-23 00:41:25 INFO  DataProviderCSV:42 - Записываю заголовки: [id, name, location, rating]
+2024-12-23 00:41:25 INFO  DataProviderCSV:51 - Записываю запись: ru.sfedu.tripshelperpack.models.Attraction@2cc3ad05
+2024-12-23 00:41:25 INFO  DataProviderCSV:53 - Запись успешно сохранена.
+2024-12-23 00:41:25 INFO  DataProviderCSV:28 - Файл существует: true
+2024-12-23 00:41:25 INFO  DataProviderCSV:51 - Записываю запись: ru.sfedu.tripshelperpack.models.Attraction@5066d65f
+2024-12-23 00:41:25 INFO  DataProviderCSV:53 - Запись успешно сохранена.
+2024-12-23 00:41:25 INFO  DataProviderCSV:129 - Загруженные записи: 
+2024-12-23 00:41:25 INFO  DataProviderCSV:130 - Запись: ru.sfedu.tripshelperpack.models.Attraction@25bc0606
+2024-12-23 00:41:25 INFO  DataProviderCSV:130 - Запись: ru.sfedu.tripshelperpack.models.Attraction@5d1659ea
+2024-12-23 00:41:25 INFO  DataProviderCSV:64 - Загружены записи для удаления.
+2024-12-23 00:41:25 INFO  DataProviderCSV:82 - Запись с ID 1 успешно удалена.
+2024-12-23 00:41:25 INFO  DataProviderCSV:129 - Загруженные записи: 
+2024-12-23 00:41:25 INFO  DataProviderCSV:130 - Запись: ru.sfedu.tripshelperpack.models.Attraction@774698ab
+2024-12-23 00:44:27 INFO  DataProviderCSV:28 - Файл существует: false
+2024-12-23 00:44:27 INFO  DataProviderCSV:42 - Записываю заголовки: [id, name, email, trip]
+2024-12-23 00:44:27 INFO  DataProviderCSV:51 - Записываю запись: ru.sfedu.tripshelperpack.models.User@3c9bfddc
+2024-12-23 00:44:27 INFO  DataProviderCSV:53 - Запись успешно сохранена.
+2024-12-23 00:44:27 INFO  DataProviderCSV:28 - Файл существует: true
+2024-12-23 00:44:27 INFO  DataProviderCSV:51 - Записываю запись: ru.sfedu.tripshelperpack.models.User@e84a8e1
+2024-12-23 00:44:27 INFO  DataProviderCSV:53 - Запись успешно сохранена.
+2024-12-23 00:44:27 INFO  DataProviderCSV:129 - Загруженные записи: 
+2024-12-23 00:44:27 INFO  DataProviderCSV:130 - Запись: ru.sfedu.tripshelperpack.models.User@463b4ac8
+2024-12-23 00:44:27 INFO  DataProviderCSV:130 - Запись: ru.sfedu.tripshelperpack.models.User@765f05af
+2024-12-23 00:44:27 INFO  DataProviderCSV:94 - Загружены записи для поиска по ID.
+2024-12-23 00:44:27 INFO  DataProviderCSV:28 - Файл существует: false
+2024-12-23 00:44:27 INFO  DataProviderCSV:42 - Записываю заголовки: [id, name, email, trip]
+2024-12-23 00:44:27 INFO  DataProviderCSV:51 - Записываю запись: ru.sfedu.tripshelperpack.models.User@57459491
+2024-12-23 00:44:27 INFO  DataProviderCSV:53 - Запись успешно сохранена.
+2024-12-23 00:44:27 INFO  DataProviderCSV:28 - Файл существует: true
+2024-12-23 00:44:27 INFO  DataProviderCSV:51 - Записываю запись: ru.sfedu.tripshelperpack.models.User@3f0846c6
+2024-12-23 00:44:27 INFO  DataProviderCSV:53 - Запись успешно сохранена.
+2024-12-23 00:44:27 INFO  DataProviderCSV:129 - Загруженные записи: 
+2024-12-23 00:44:27 INFO  DataProviderCSV:130 - Запись: ru.sfedu.tripshelperpack.models.User@3fa2213
+2024-12-23 00:44:27 INFO  DataProviderCSV:130 - Запись: ru.sfedu.tripshelperpack.models.User@3e7634b9
+2024-12-23 00:44:27 INFO  DataProviderCSV:64 - Загружены записи для удаления.
+2024-12-23 00:44:27 INFO  DataProviderCSV:82 - Запись с ID 1 успешно удалена.
+2024-12-23 00:44:27 INFO  DataProviderCSV:129 - Загруженные записи: 
+2024-12-23 00:44:27 INFO  DataProviderCSV:130 - Запись: ru.sfedu.tripshelperpack.models.User@40cb698e
+2024-12-23 00:44:27 INFO  DataProviderCSV:28 - Файл существует: false
+2024-12-23 00:44:27 INFO  DataProviderCSV:42 - Записываю заголовки: [id, name, email, trip]
+2024-12-23 00:44:27 INFO  DataProviderCSV:51 - Записываю запись: ru.sfedu.tripshelperpack.models.User@3382f8ae
+2024-12-23 00:44:27 INFO  DataProviderCSV:53 - Запись успешно сохранена.
+2024-12-23 00:44:27 INFO  DataProviderCSV:129 - Загруженные записи: 
+2024-12-23 00:44:27 INFO  DataProviderCSV:130 - Запись: ru.sfedu.tripshelperpack.models.User@674658f7
+2024-12-23 00:44:27 INFO  DataProviderCSV:28 - Файл существует: false
+2024-12-23 00:44:27 INFO  DataProviderCSV:42 - Записываю заголовки: [id, name, email, trip]
+2024-12-23 00:44:27 INFO  DataProviderCSV:51 - Записываю запись: ru.sfedu.tripshelperpack.models.User@5c8eee0f
+2024-12-23 00:44:27 INFO  DataProviderCSV:53 - Запись успешно сохранена.
+2024-12-23 00:44:27 INFO  DataProviderCSV:28 - Файл существует: true
+2024-12-23 00:44:27 INFO  DataProviderCSV:51 - Записываю запись: ru.sfedu.tripshelperpack.models.User@565b064f
+2024-12-23 00:44:27 INFO  DataProviderCSV:53 - Запись успешно сохранена.
+2024-12-23 00:44:27 INFO  DataProviderCSV:129 - Загруженные записи: 
+2024-12-23 00:44:27 INFO  DataProviderCSV:130 - Запись: ru.sfedu.tripshelperpack.models.User@53d1b9b3
+2024-12-23 00:44:27 INFO  DataProviderCSV:130 - Запись: ru.sfedu.tripshelperpack.models.User@2cae1042
+2024-12-23 12:11:48 INFO  DataProviderXML:35 - Запись успешно сохранена: ru.sfedu.tripshelperpack.models.User@3542162a
+2024-12-23 12:11:48 INFO  DataProviderXML:35 - Запись успешно сохранена: ru.sfedu.tripshelperpack.models.User@183e8023
+2024-12-23 12:11:48 INFO  DataProviderXML:35 - Запись успешно сохранена: ru.sfedu.tripshelperpack.models.User@5f031ebd
+2024-12-23 12:11:48 INFO  DataProviderXML:35 - Запись успешно сохранена: ru.sfedu.tripshelperpack.models.User@d8305c2
+2024-12-23 12:11:48 INFO  DataProviderXML:69 - Запись с ID 1 успешно удалена.
+2024-12-23 12:11:48 WARN  DataProviderXML:99 - Запись с ID 1 не найдена.
+2024-12-23 12:11:48 ERROR DataProviderXML:103 - Ошибка при получении записи с ID 1
+java.lang.Exception: Запись с ID 1 не найдена.
+	at ru.sfedu.tripshelperpack.api.DataProviderXML.lambda$getRecordById$2(DataProviderXML.java:100) ~[classes/:?]
+	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
+	at ru.sfedu.tripshelperpack.api.DataProviderXML.getRecordById(DataProviderXML.java:98) ~[classes/:?]
+	at ru.sfedu.tripshelperpack.DataProviderXMLTest.lambda$testDeleteUser$0(DataProviderXMLTest.java:42) ~[test-classes/:?]
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:55) ~[junit-jupiter-api-5.7.0.jar:5.7.0]
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:37) ~[junit-jupiter-api-5.7.0.jar:5.7.0]
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3007) ~[junit-jupiter-api-5.7.0.jar:5.7.0]
+	at ru.sfedu.tripshelperpack.DataProviderXMLTest.testDeleteUser(DataProviderXMLTest.java:42) ~[test-classes/:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:688) ~[junit-platform-commons-1.7.0.jar:1.7.0]
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60) ~[junit-jupiter-engine-5.7.0.jar:5.7.0]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131) ~[junit-jupiter-engine-5.7.0.jar:5.7.0]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149) ~[junit-jupiter-engine-5.7.0.jar:5.7.0]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140) ~[junit-jupiter-engine-5.7.0.jar:5.7.0]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84) ~[junit-jupiter-engine-5.7.0.jar:5.7.0]
+	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115) ~[junit-jupiter-engine-5.7.0.jar:5.7.0]
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105) ~[junit-jupiter-engine-5.7.0.jar:5.7.0]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106) ~[junit-jupiter-engine-5.7.0.jar:5.7.0]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64) ~[junit-jupiter-engine-5.7.0.jar:5.7.0]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45) ~[junit-jupiter-engine-5.7.0.jar:5.7.0]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37) ~[junit-jupiter-engine-5.7.0.jar:5.7.0]
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104) ~[junit-jupiter-engine-5.7.0.jar:5.7.0]
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98) ~[junit-jupiter-engine-5.7.0.jar:5.7.0]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$6(TestMethodTestDescriptor.java:210) ~[junit-jupiter-engine-5.7.0.jar:5.7.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.0.jar:1.7.0]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:206) ~[junit-jupiter-engine-5.7.0.jar:5.7.0]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:131) ~[junit-jupiter-engine-5.7.0.jar:5.7.0]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:65) ~[junit-jupiter-engine-5.7.0.jar:5.7.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139) ~[junit-platform-engine-1.7.0.jar:1.7.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.0.jar:1.7.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129) ~[junit-platform-engine-1.7.0.jar:1.7.0]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.7.0.jar:1.7.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127) ~[junit-platform-engine-1.7.0.jar:1.7.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.0.jar:1.7.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126) ~[junit-platform-engine-1.7.0.jar:1.7.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84) ~[junit-platform-engine-1.7.0.jar:1.7.0]
+	at java.util.ArrayList.forEach(ArrayList.java:1596) ~[?:?]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.7.0.jar:1.7.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143) ~[junit-platform-engine-1.7.0.jar:1.7.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.0.jar:1.7.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129) ~[junit-platform-engine-1.7.0.jar:1.7.0]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.7.0.jar:1.7.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127) ~[junit-platform-engine-1.7.0.jar:1.7.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.0.jar:1.7.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126) ~[junit-platform-engine-1.7.0.jar:1.7.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84) ~[junit-platform-engine-1.7.0.jar:1.7.0]
+	at java.util.ArrayList.forEach(ArrayList.java:1596) ~[?:?]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.7.0.jar:1.7.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143) ~[junit-platform-engine-1.7.0.jar:1.7.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.0.jar:1.7.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129) ~[junit-platform-engine-1.7.0.jar:1.7.0]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.7.0.jar:1.7.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127) ~[junit-platform-engine-1.7.0.jar:1.7.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.0.jar:1.7.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126) ~[junit-platform-engine-1.7.0.jar:1.7.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84) ~[junit-platform-engine-1.7.0.jar:1.7.0]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32) ~[junit-platform-engine-1.7.0.jar:1.7.0]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.7.0.jar:1.7.0]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51) ~[junit-platform-engine-1.7.0.jar:1.7.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108) ~[junit-platform-launcher-1.7.0.jar:1.7.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88) ~[junit-platform-launcher-1.7.0.jar:1.7.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54) ~[junit-platform-launcher-1.7.0.jar:1.7.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67) [junit-platform-launcher-1.7.0.jar:1.7.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52) [junit-platform-launcher-1.7.0.jar:1.7.0]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:96) [junit-platform-launcher-1.7.0.jar:1.7.0]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:75) [junit-platform-launcher-1.7.0.jar:1.7.0]
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57) [junit5-rt.jar:?]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38) [junit-rt.jar:?]
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11) [idea_rt.jar:?]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35) [junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232) [junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55) [junit-rt.jar:?]
+2024-12-23 12:11:48 INFO  DataProviderXML:114 - Файл не найден: users_test.xml. Создан пустой источник данных.
+2024-12-23 12:12:09 INFO  DataProviderXML:35 - Запись успешно сохранена: ru.sfedu.tripshelperpack.models.User@5a411614
+2024-12-23 12:12:09 INFO  DataProviderXML:35 - Запись успешно сохранена: ru.sfedu.tripshelperpack.models.User@5dd91bca
+2024-12-23 12:12:09 INFO  DataProviderXML:35 - Запись успешно сохранена: ru.sfedu.tripshelperpack.models.User@16746061
+2024-12-23 12:12:09 INFO  DataProviderXML:35 - Запись успешно сохранена: ru.sfedu.tripshelperpack.models.User@73163d48
+2024-12-23 12:12:09 INFO  DataProviderXML:69 - Запись с ID 1 успешно удалена.
+2024-12-23 12:12:09 WARN  DataProviderXML:99 - Запись с ID 1 не найдена.
+2024-12-23 12:12:09 ERROR DataProviderXML:103 - Ошибка при получении записи с ID 1
+java.lang.Exception: Запись с ID 1 не найдена.
+	at ru.sfedu.tripshelperpack.api.DataProviderXML.lambda$getRecordById$2(DataProviderXML.java:100) ~[classes/:?]
+	at java.util.Optional.orElseThrow(Optional.java:403) ~[?:?]
+	at ru.sfedu.tripshelperpack.api.DataProviderXML.getRecordById(DataProviderXML.java:98) ~[classes/:?]
+	at ru.sfedu.tripshelperpack.DataProviderXMLTest.lambda$testDeleteUser$0(DataProviderXMLTest.java:42) ~[test-classes/:?]
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:55) ~[junit-jupiter-api-5.7.0.jar:5.7.0]
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:37) ~[junit-jupiter-api-5.7.0.jar:5.7.0]
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3007) ~[junit-jupiter-api-5.7.0.jar:5.7.0]
+	at ru.sfedu.tripshelperpack.DataProviderXMLTest.testDeleteUser(DataProviderXMLTest.java:42) ~[test-classes/:?]
+	at jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:688) ~[junit-platform-commons-1.7.0.jar:1.7.0]
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60) ~[junit-jupiter-engine-5.7.0.jar:5.7.0]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131) ~[junit-jupiter-engine-5.7.0.jar:5.7.0]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149) ~[junit-jupiter-engine-5.7.0.jar:5.7.0]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140) ~[junit-jupiter-engine-5.7.0.jar:5.7.0]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84) ~[junit-jupiter-engine-5.7.0.jar:5.7.0]
+	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115) ~[junit-jupiter-engine-5.7.0.jar:5.7.0]
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105) ~[junit-jupiter-engine-5.7.0.jar:5.7.0]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106) ~[junit-jupiter-engine-5.7.0.jar:5.7.0]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64) ~[junit-jupiter-engine-5.7.0.jar:5.7.0]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45) ~[junit-jupiter-engine-5.7.0.jar:5.7.0]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37) ~[junit-jupiter-engine-5.7.0.jar:5.7.0]
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104) ~[junit-jupiter-engine-5.7.0.jar:5.7.0]
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98) ~[junit-jupiter-engine-5.7.0.jar:5.7.0]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$6(TestMethodTestDescriptor.java:210) ~[junit-jupiter-engine-5.7.0.jar:5.7.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.0.jar:1.7.0]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:206) ~[junit-jupiter-engine-5.7.0.jar:5.7.0]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:131) ~[junit-jupiter-engine-5.7.0.jar:5.7.0]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:65) ~[junit-jupiter-engine-5.7.0.jar:5.7.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139) ~[junit-platform-engine-1.7.0.jar:1.7.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.0.jar:1.7.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129) ~[junit-platform-engine-1.7.0.jar:1.7.0]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.7.0.jar:1.7.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127) ~[junit-platform-engine-1.7.0.jar:1.7.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.0.jar:1.7.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126) ~[junit-platform-engine-1.7.0.jar:1.7.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84) ~[junit-platform-engine-1.7.0.jar:1.7.0]
+	at java.util.ArrayList.forEach(ArrayList.java:1596) ~[?:?]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.7.0.jar:1.7.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143) ~[junit-platform-engine-1.7.0.jar:1.7.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.0.jar:1.7.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129) ~[junit-platform-engine-1.7.0.jar:1.7.0]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.7.0.jar:1.7.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127) ~[junit-platform-engine-1.7.0.jar:1.7.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.0.jar:1.7.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126) ~[junit-platform-engine-1.7.0.jar:1.7.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84) ~[junit-platform-engine-1.7.0.jar:1.7.0]
+	at java.util.ArrayList.forEach(ArrayList.java:1596) ~[?:?]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.7.0.jar:1.7.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143) ~[junit-platform-engine-1.7.0.jar:1.7.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.0.jar:1.7.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129) ~[junit-platform-engine-1.7.0.jar:1.7.0]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.7.0.jar:1.7.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127) ~[junit-platform-engine-1.7.0.jar:1.7.0]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.0.jar:1.7.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126) ~[junit-platform-engine-1.7.0.jar:1.7.0]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84) ~[junit-platform-engine-1.7.0.jar:1.7.0]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32) ~[junit-platform-engine-1.7.0.jar:1.7.0]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.7.0.jar:1.7.0]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51) ~[junit-platform-engine-1.7.0.jar:1.7.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108) ~[junit-platform-launcher-1.7.0.jar:1.7.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88) ~[junit-platform-launcher-1.7.0.jar:1.7.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54) ~[junit-platform-launcher-1.7.0.jar:1.7.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67) [junit-platform-launcher-1.7.0.jar:1.7.0]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52) [junit-platform-launcher-1.7.0.jar:1.7.0]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:96) [junit-platform-launcher-1.7.0.jar:1.7.0]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:75) [junit-platform-launcher-1.7.0.jar:1.7.0]
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:57) [junit5-rt.jar:?]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38) [junit-rt.jar:?]
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11) [idea_rt.jar:?]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35) [junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232) [junit-rt.jar:?]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55) [junit-rt.jar:?]
+2024-12-23 12:12:09 INFO  DataProviderXML:114 - Файл не найден: users_test.xml. Создан пустой источник данных.
