@@ -87,6 +87,8 @@ public class DataProviderCSV<T> implements IDataProvider<T> {
         }
     }
 
+
+    // try catch убрать
     @Override
     public T getRecordById(long id) throws Exception {
         try {

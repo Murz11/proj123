@@ -28,4 +28,8 @@ public class UserService {
     public List<User> getAllUsers() throws SQLException {
         return userDAO.getAllUsers();
     }
+
+    public void clearTable() throws SQLException {
+        userDAO.clearTable();
+    }
 }

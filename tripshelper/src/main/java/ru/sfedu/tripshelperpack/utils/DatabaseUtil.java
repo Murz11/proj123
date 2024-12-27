@@ -9,8 +9,8 @@ import java.sql.SQLException;
 public class DatabaseUtil {
 
     private static final String DB_URL = ConfigurationUtil.getConfigurationEntry(Constants.DB_URL);
-    private static final String DB_USER = ConfigurationUtil.getConfigurationEntry(Constants.DB_USER);
-    private static final String DB_PASSWORD = ConfigurationUtil.getConfigurationEntry(Constants.DB_PASSWORD);
+    private static final String DB_USER = ConfigurationUtil.getConfigurationEntry(Constants.DB_USER).trim();
+    private static final String DB_PASSWORD = ConfigurationUtil.getConfigurationEntry(Constants.DB_PASSWORD).trim();
 
     static {
         try {
@@ -21,6 +21,7 @@ public class DatabaseUtil {
     }
 
     public static Connection getConnection() throws SQLException {
+
         return DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
     }
 }

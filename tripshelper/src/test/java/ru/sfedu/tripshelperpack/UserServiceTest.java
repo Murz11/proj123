@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 import ru.sfedu.tripshelperpack.models.User;
 import ru.sfedu.tripshelperpack.service.UserService;
+import ru.sfedu.tripshelperpack.utils.ConfigurationUtil;
 import ru.sfedu.tripshelperpack.utils.DatabaseUtil;
 
 import java.sql.*;
@@ -25,6 +26,8 @@ class UserServiceTest {
 
     @Test
     void testCRUDOperations() throws SQLException {
+
+
         // Create
         User user = new User(1L, "John Doe", "john.doe@example.com", 101L);
         userService.createUser(user);

@@ -79,4 +79,11 @@ public class UserDAO {
             }
         }
     }
+
+    public void clearTable() throws SQLException {
+        try (Connection connection = DatabaseUtil.getConnection();
+             Statement stmt = connection.createStatement()) {
+            stmt.executeUpdate("DELETE FROM users");
+        }
+    }
 }
